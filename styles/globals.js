@@ -3,18 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
   :root {
     --white: #FFFFFF;
-    --medium-white: #BDBDBD;
     --black: #212121;
-    --green: #48A69B;
-    --medium-green: #59938A;
-    --dark-green: #1C3353;
-    --gray: #909090;
-    --light-gray: #D3E4DD;
-    --red: #D00000;
-    --dark-red: #FF4040;
-    --purple: #562B8B;
-    --blue: #305589;
-    --light-blue: #6E93CA;
+    --orange: #f49e0b;
+    --light-orange: rgb(252, 185, 69);
+    --red: #ff0000;
+    
+   
   }
   
   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -35,7 +29,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
@@ -80,19 +74,24 @@ export default createGlobalStyle`
   }
 
   input,
-textarea,html input[type="button"],
-input[type="reset"],
-input[type="submit"],button[disabled],
-input[type="radio"], input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button, input[type="search"], input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  border:none;
-    background-image:none;
-    background-color:transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
+  textarea,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"],
+  button[disabled],
+  input[type="radio"], 
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="search"], 
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    border:none;
+      background-image:none;
+      background-color:transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+  }
 
 html {
     scroll-behavior: smooth;
@@ -116,10 +115,6 @@ html {
       padding-right: 10rem;
     }
 
-    .margins-oficina {
-      padding-left: 15rem;
-      padding-right: 15rem;
-    }
   }
  
   @media (max-width: 1366px) {
@@ -128,10 +123,6 @@ html {
      padding-right: 6rem;
     }
 
-    .margins-oficina {
-      padding-left: 10rem;
-      padding-right: 10rem;
-    }
   }
 
   @media (max-width: 1199.98px) {
@@ -139,30 +130,12 @@ html {
       padding-left: 2rem;
       padding-right: 2rem;
     }
-
-    .margins-oficina {
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
   }
 
   @media (max-width: 767.98px) {
     .margins {
       padding-left: 1.2rem;
       padding-right: 1.2rem;
-    }
-
-    .margins-oficina {
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
-    }
-
-    .swiper-button-prev {
-      display: none;
-    }
-
-    .swiper-button-next{
-      display: none;
-    }
+    }   
   }
 `;

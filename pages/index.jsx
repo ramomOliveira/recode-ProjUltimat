@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Layout from '../components/Layout';
 
 import { Container } from '../styles/index/style';
 
@@ -14,3 +15,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
