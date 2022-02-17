@@ -1,10 +1,17 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Projeto Oluchi
+```bash
+TECNOLOGIAS USADAS
+-React.js
+-Next.js
+-Styled-Component
+
+```
 
 ## Deploy
 
-- Veja o projeto online [Oluchi] (https://projeto-oluchi.vercel.app/) , deploy feito na [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- Veja o projeto online [Oluchi](https://projeto-oluchi.vercel.app/) , deploy feito na [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
 
 ## Getting Started
