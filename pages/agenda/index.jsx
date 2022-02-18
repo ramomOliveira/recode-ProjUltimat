@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Layout from '../../components/Layout';
 
 export default function Calendar() {
   return (
@@ -12,3 +13,7 @@ export default function Calendar() {
     </>
   );
 }
+
+Calendar.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Layout from '../../components/Layout';
 
 export default function News() {
   return (
@@ -12,3 +13,6 @@ export default function News() {
     </>
   );
 }
+News.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '../Button';
 
 import { Container, WrapperLeft, WrapperRight } from './style';
@@ -6,16 +7,28 @@ export default function Header() {
   return (
     <Container className="margins">
       <WrapperLeft>
-        <div>
-          <img src="/images/logo.png" alt="" />
-          <p>Oluchi</p>
-        </div>
+        <Link href="/">
+          <div>
+            <img src="/images/logo.png" alt="" />
+            <p>Oluchi</p>
+          </div>
+        </Link>
         <ul>
-          <li>Início</li>
-          <li>Notícias</li>
-          <li>Agendas</li>
-          <li>Sobre</li>
-          <li>Categorias</li>
+          <Link href="/">
+            <li>Início</li>
+          </Link>
+          <Link href="/noticias">
+            <li>Notícias</li>
+          </Link>
+          <Link href="/agenda">
+            <li>Agendas</li>
+          </Link>
+          <Link href="/quem-somos">
+            <li>Sobre</li>
+          </Link>
+          <Link href="/categorias">
+            <li>Categorias</li>
+          </Link>
         </ul>
       </WrapperLeft>
 

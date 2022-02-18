@@ -20,6 +20,7 @@ export const WrapperLeft = styled.div`
   gap: 16px;
 
   > div {
+    cursor: pointer;
     display: flex;
     align-items: center;
     > img {

@@ -10,7 +10,7 @@ export default function Home() {
         <title>Projeto - Oluchi</title>
       </Head>
       <Container>
-        <h1>Olá, mundo!</h1>
+        <h1>Ola mundo</h1>
       </Container>
     </>
   );
