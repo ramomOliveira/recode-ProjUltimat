@@ -8,7 +8,7 @@ export const Container = styled.div`
     to right,
     var(--orange),
     var(--light-orange),
-    var(--white)
+    var(--white) 95%
   );
   padding-top: 10px;
   padding-bottom: 10px;
