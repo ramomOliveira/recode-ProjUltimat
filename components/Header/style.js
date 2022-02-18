@@ -8,7 +8,7 @@ export const Container = styled.div`
     to right,
     var(--orange),
     var(--light-orange),
-    var(--white) 95%
+    var(--white) 98%
   );
   padding-top: 10px;
   padding-bottom: 10px;
@@ -51,7 +51,7 @@ export const WrapperLeft = styled.div`
 
 export const WrapperRight = styled.div`
   > div {
-    border: 2px solid var(--orange);
+    border: 1px solid var(--orange);
     display: flex;
     padding: 5px 15px;
     color: var(--orange);
