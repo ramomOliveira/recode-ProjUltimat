@@ -9,7 +9,7 @@ export const Container = styled.div`
   );
 
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 1fr;
   padding-top: 50px;
   padding-bottom: 50px;
   align-items: center;

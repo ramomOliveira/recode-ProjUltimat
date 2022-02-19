@@ -1,31 +1,34 @@
 import Button from '../Button';
+import { Container, WrapperTop, WrapperVertical, WrapperButton } from './style';
 
 export default function CardContact() {
   return (
-    <div>
-      <div>
+    <Container className="margins">
+      <WrapperTop>
         <h1>Contato</h1>
 
         <div>
-          <div>
+          <WrapperVertical>
             <h3>Nome</h3>
             <input type="text" name="" id="" />
-          </div>
+          </WrapperVertical>
 
-          <div>
+          <WrapperVertical>
             <h3>Email</h3>
             <input type="text" name="" id="" />
-          </div>
+          </WrapperVertical>
         </div>
-      </div>
+      </WrapperTop>
 
       <div>
-        <div>
+        <WrapperVertical>
           <h3>Mensagem</h3>
-          <textarea name="mensagem" id="mensagem" />
-        </div>
-        <Button>Enviar</Button>
+          <textarea name="mensagem" id="mensagem" rows="5" />
+        </WrapperVertical>
       </div>
-    </div>
+      <WrapperButton>
+        <Button>Enviar</Button>
+      </WrapperButton>
+    </Container>
   );
 }
