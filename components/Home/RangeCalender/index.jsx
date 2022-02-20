@@ -1,6 +1,13 @@
 import Button from '../../Button';
+import CardCalender from '../CardCalender';
 
-import { Container, Wrapper } from './style';
+import { Container, Wrapper, WrapperCards } from './style';
+
+const arrayImage = [
+  '/images/home/img-calender1.jpeg',
+  '/images/home/img-calender2.jpeg',
+  '/images/home/img-calender3.jpeg',
+];
 
 export default function RangeCalender() {
   return (
@@ -10,9 +17,11 @@ export default function RangeCalender() {
         <Button link>Veja mais +</Button>
       </Wrapper>
 
-      <div>
-        <div>cards</div>
-      </div>
+      <WrapperCards>
+        {arrayImage.map((image) => (
+          <CardCalender imageUrl={image} />
+        ))}
+      </WrapperCards>
     </Container>
   );
 }

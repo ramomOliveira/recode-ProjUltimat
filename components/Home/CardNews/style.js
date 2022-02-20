@@ -19,7 +19,7 @@ export const WrapperLeft = styled.div`
 `;
 
 export const WrapperRight = styled.div`
-  background-image: url('/images/capaHomeMulher.png');
+  background-image: url('/images/home/coverHomeWoman.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
