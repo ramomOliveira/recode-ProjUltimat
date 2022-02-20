@@ -20,7 +20,7 @@ export const WrapperLeft = styled.div`
   > h1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     font-size: 50px;
 
     > span {
