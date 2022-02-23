@@ -3,15 +3,20 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: ${(props) => props.theme.colors.primary};
   color: #fff;
-  display: flex;
+  display: none;
+  
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    
+  }
 `;
 
 export const Logo = styled.div`
   margin-top: 20px;
-  
   
 `;
 
@@ -32,9 +37,9 @@ export const WrapperNavigation = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 4rem;
+      height: 3.5rem;
       width: 100%;
-      font-size: 1rem;
+      font-size: 0.688rem;
       font-weight: 400;
       color: ${(props) => props.theme.colors.textPrimary};
       gap: 10px;
@@ -42,7 +47,11 @@ export const WrapperNavigation = styled.div`
       :hover {
        color: ${(props) => props.theme.colors.hoverColor};
       } 
-      
+
+      @media (min-width: 768px) {
+        font-size: 1rem;
+        height: 4rem;
+      }
     }
 
   }
@@ -53,6 +62,7 @@ export const WrapperLogout = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  
 
   > a > li {
     color: red;

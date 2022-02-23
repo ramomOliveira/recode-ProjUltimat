@@ -8,6 +8,7 @@ export default function LayoutUser({ title, subTitle, children }) {
   return (
     <Container>
       <LateralMenu />
+
       <Wrapper>
         <Title title={title} subTitle={subTitle} />
         <Content>{children}</Content>

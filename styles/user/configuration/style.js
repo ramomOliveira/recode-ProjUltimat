@@ -11,8 +11,10 @@ export const WrapperForm = styled.form`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: min-content;
   
+  @media (min-width: 768px) {
+    width: min-content;
+  }
 
   > div {
     display: flex;
@@ -27,11 +29,12 @@ export const WrapperForm = styled.form`
 
     > div {
       display: flex;
+      flex-direction: column;
       gap: 20px;
       
 
       > div {
-        
+        width: 100%;
         > h3 {
           font-size: 16px;
           margin-bottom: 8px;
@@ -43,8 +46,16 @@ export const WrapperForm = styled.form`
           padding: 15px 16px;
           border: 1px solid ${(props) => props.theme.colors.textPrimary};
           border-radius: 4px;
-          width: 400px;
+          min-width: 250px;
+
+          @media (min-width: 768px) {
+            width: 400px;
+          }
         }
+      }
+
+      @media (min-width: 768px) {
+        flex-direction: row;
       }
     }
   }

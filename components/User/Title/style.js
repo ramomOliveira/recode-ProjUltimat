@@ -3,14 +3,25 @@ import styled from 'styled-components';
 export const Container = styled.div`
   > h1 {
     font-weight: 900;
-    font-size: 50px;
+    font-size: 30px;
     color: ${(props) => props.theme.colors.textPrimary};
+    
   }
 
   > h2 {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     color: ${(props) => props.theme.colors.textSecundary};
+    margin-top: 10px;
+  }
+
+  @media (min-width: 768px) {
+    > h1 {
+    font-size: 50px;
+    }
+    > h2 {
+    font-size: 20px;
     margin-top: 20px;
+    }
   }
 `;
