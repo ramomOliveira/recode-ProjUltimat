@@ -42,14 +42,14 @@ const getHoverBorder = (props) => {
 }
 
 export const Container = styled.button`
-  padding: 10px 15px;
+  padding: ${(props) => props.noPadding ? "0px" : "10px 15px"};
   border-radius: 5px;
   width: max-content;
   font-size: 16px;
   color: ${(props) => getColorText(props)};
   background-color: ${(props) => getColorBackground(props)};
   text-transform: ${(props) => (props.link ? 'none' : 'uppercase')};
-  text-decoration: ${(props) => (props.link ? 'underline' : 'none')};
+  text-decoration: ${(props) => (props.underline ? 'underline' : 'none')};
 
   :hover {
     color: ${(props) => getHoverColor(props)};
