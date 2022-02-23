@@ -36,7 +36,7 @@ export const WrapperLeft = styled.div`
   }
 
   > ul {
-    display: flex;
+    display: none;
     gap: 16px;
     text-transform: uppercase;
 
@@ -47,12 +47,22 @@ export const WrapperLeft = styled.div`
       }
     }
   }
+
+  @media (min-width: 768px) {
+    ul {
+      display: flex;
+    }
+  }
 `;
 
 export const WrapperRight = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
   > div {
     border: 1px solid var(--orange);
-    display: flex;
+    display: none;
     padding: 5px 15px;
     color: var(--orange);
     border-radius: 5px;
@@ -65,7 +75,11 @@ export const WrapperRight = styled.div`
       }
     }
   }
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  
+
+  @media (min-width: 768px) {
+    > div {
+      display: flex;
+    }
+  }
 `;

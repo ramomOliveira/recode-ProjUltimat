@@ -7,9 +7,13 @@ export default function User() {
       <Head>
         <title>Oluchi - Painel Admin</title>
       </Head>
-      <LayoutUser title="Página Inicial" subTitle="Estamos contruindo">
+      <LayoutUser title="Olá, João!" subTitle="Estamos contruindo">
         <h3>Conteudo</h3>
       </LayoutUser>
     </>
   );
 }
+
+// User.getLayout = function getLayout(page) {
+//   return <LayoutUser>{page}</LayoutUser>;
+// };

@@ -17,7 +17,8 @@ export const WrapperTop = styled.div`
 
   > div {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    
     gap: 16px;
   }
 
@@ -25,6 +26,13 @@ export const WrapperTop = styled.div`
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 10px;
+  }
+
+  @media (min-width: 768px) {
+    > div {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 `;
 

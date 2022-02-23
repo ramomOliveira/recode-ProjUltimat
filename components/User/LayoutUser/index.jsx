@@ -1,13 +1,17 @@
 import LateralMenu from '../LateralMenu';
-import HeaderUser from '../HeaderUser';
+import Title from '../Title';
 import Content from '../Content';
+
+import { Container, Wrapper } from './style';
 
 export default function LayoutUser({ title, subTitle, children }) {
   return (
-    <div>
+    <Container>
       <LateralMenu />
-      <HeaderUser title={title} subTitle={subTitle} />
-      <Content>{children}</Content>
-    </div>
+      <Wrapper>
+        <Title title={title} subTitle={subTitle} />
+        <Content>{children}</Content>
+      </Wrapper>
+    </Container>
   );
 }

@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: repeat(1, 1fr);
   margin-top: 50px;
   margin-bottom: 50px;
   align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 30% 1fr;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -21,5 +25,9 @@ export const Wrapper = styled.div`
 
 export const WrapperCards = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;

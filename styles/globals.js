@@ -34,6 +34,8 @@ export default createGlobalStyle`
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     line-height: 1;
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
   }
 
   blockquote {

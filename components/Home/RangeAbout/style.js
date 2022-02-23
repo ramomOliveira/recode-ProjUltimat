@@ -9,11 +9,15 @@ export const Container = styled.div`
   );
 
   display: grid;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: repeat(1, 1fr);
   padding-top: 50px;
   padding-bottom: 50px;
   align-items: center;
   gap: 30px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 20% 1fr;
+  }
 `;
 
 export const WrapperLeft = styled.div`

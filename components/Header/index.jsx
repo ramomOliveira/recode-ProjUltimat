@@ -39,7 +39,7 @@ export default function Header() {
         </div>
 
         <Button>Cadastrar</Button>
-        <Button>Login</Button>
+        <Link href="/usuario"><Button>Login</Button></Link>
       </WrapperRight>
     </Container>
   );

@@ -1,8 +1,8 @@
 import { Container } from './style';
 
-export default function Button({ children, type = 'button', onClick, link }) {
+export default function Button({ children, type = 'button', onClick, link, deleteMode }) {
   return (
-    <Container link={link} onClick={onClick} type={type}>
+    <Container deleteMode={deleteMode} link={link} onClick={onClick} type={type}>
       {children}
     </Container>
   );
