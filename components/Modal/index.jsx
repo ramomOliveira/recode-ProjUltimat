@@ -9,6 +9,7 @@ export default function Modal({
   onClose,
   title,
   children,
+  background,
 }) {
   const handleOutsideClick = () => {
     onClose();
@@ -19,7 +20,7 @@ export default function Modal({
   }
 
   return (
-    <WrapperModal id={id} onClick={handleOutsideClick}>
+    <WrapperModal background={background} id={id} onClick={handleOutsideClick}>
       <Container onClick={(event) => event.stopPropagation()}>
         <HeaderModal>
           <h1>{title}</h1>

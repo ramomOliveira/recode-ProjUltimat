@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import Button from '../Button';
 
+
 import { Container, WrapperLeft, WrapperRight } from './style';
 
 export default function Header() {
+
+
+
   return (
     <Container className="margins">
       <WrapperLeft>
@@ -38,8 +42,12 @@ export default function Header() {
           <span className="material-icons-outlined">search</span>
         </div>
 
-        <Button>Cadastrar</Button>
-        <Link href="/usuario"><Button>Login</Button></Link>
+        <Link href="/autenticacao">
+          <Button>Cadastrar</Button>
+        </Link>
+        <Link href="/usuario">
+          <Button>Login</Button>
+        </Link>
       </WrapperRight>
     </Container>
   );

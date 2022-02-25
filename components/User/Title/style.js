@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div > h1 {
     font-weight: 900;
     font-size: 30px;
     color: ${(props) => props.theme.colors.textPrimary};
     
   }
 
-  > h2 {
+  > div > h2 {
     font-weight: 400;
     font-size: 15px;
     color: ${(props) => props.theme.colors.textSecundary};
@@ -16,10 +19,10 @@ export const Container = styled.div`
   }
 
   @media (min-width: 768px) {
-    > h1 {
+    > div > h1 {
     font-size: 50px;
     }
-    > h2 {
+    > div > h2 {
     font-size: 20px;
     margin-top: 20px;
     }

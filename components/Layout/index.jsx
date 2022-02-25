@@ -1,12 +1,13 @@
 import Footer from '../Footer';
 import Header from '../Header';
+import { Container } from './style';
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <Container>
       <Header />
       {children}
       <Footer />
-    </div>
+    </Container>
   );
 }

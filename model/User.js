@@ -1,0 +1,1 @@
+// export default function User({ uid, email, name, token, provedor, imgUrl });
