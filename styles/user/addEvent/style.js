@@ -31,6 +31,16 @@ export const WrapperForm = styled.form`
       display: flex;
       flex-direction: column;
       gap: 20px;
+
+      > textarea {
+          font-size: 16px;
+          padding: 15px 16px;
+          border: 1px solid ${(props) => props.theme.colors.textPrimary};
+          border-radius: 4px;
+          width: 100%;
+
+         
+        }
       
 
       > div {
@@ -52,6 +62,9 @@ export const WrapperForm = styled.form`
             width: 400px;
           }
         }
+
+        
+
       }
 
       @media (min-width: 768px) {

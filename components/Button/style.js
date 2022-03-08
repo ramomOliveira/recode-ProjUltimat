@@ -11,7 +11,6 @@ const getColorText = (props) => {
 }
 
 const getColorBackground = (props) => {
-
   if (props.link) {
     return 'transparent'
   } else if (props.deleteMode) {
@@ -23,7 +22,7 @@ const getColorBackground = (props) => {
 
 const getHoverColor = (props) => {
   if (props.link) {
-    return 'var(--black)'
+    return 'var(--light-orange)'
   } else if (props.deleteMode) {
     return 'var(--red)'
   } else {
@@ -31,15 +30,16 @@ const getHoverColor = (props) => {
   }
 }
 
-const getHoverBorder = (props) => {
+const getHoverBackground = (props) => {
   if (props.link) {
-    return 'none'
+    return 'transparent'
   } else if (props.deleteMode) {
-    return 'none'
+    return 'transparent'
   } else {
-    return '2px solid var(--white)'
+    return 'var(--white)'
   }
 }
+
 
 export const Container = styled.button`
   padding: ${(props) => props.noPadding ? "0px" : "10px 15px"};
@@ -53,8 +53,8 @@ export const Container = styled.button`
 
   :hover {
     color: ${(props) => getHoverColor(props)};
-    border: ${(props) => getHoverBorder(props)};
-    background-color: transparent;
+    
+    background-color: ${(props) => getHoverBackground(props)};
     
   }
 `;

@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-image: linear-gradient(
-    to right,
-    var(--orange),
-    var(--light-orange),
-    var(--white) 99%
-  );
+  background-color: 
+    var(--orange);
 
   display: grid;
   grid-template-columns: repeat(1, 1fr);

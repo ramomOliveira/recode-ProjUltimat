@@ -4,12 +4,7 @@ export const Container = styled.div`
   padding-top: 50px;
   padding-bottom: 50px;
 
-  background-image: linear-gradient(
-    to right,
-    var(--orange),
-    var(--light-orange),
-    var(--white) 98%
-  );
+  background-color: var(--orange);
 `;
 
 export const WrapperTop = styled.div`

@@ -1,4 +1,5 @@
 import Button from "../../../Button";
+import Link from 'next/link';
 import { Container, WrapperSearch } from './style';
 
 export default function HeaderCalender() {
@@ -8,7 +9,7 @@ export default function HeaderCalender() {
         <input type="search" />
         <Button link >Buscar</Button>
       </WrapperSearch>
-      <Button>Adicionar Evento</Button>
+      <Link href="/usuario/adicionar-evento"><Button>Adicionar Evento</Button></Link>
     </Container>
   )
 }

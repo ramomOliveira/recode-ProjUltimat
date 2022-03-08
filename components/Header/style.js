@@ -4,12 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: linear-gradient(
-    to right,
-    var(--orange),
-    var(--light-orange),
-    var(--white) 98%
-  );
+  background-color: var(--orange);
   padding-top: 10px;
   padding-bottom: 10px;
 `;

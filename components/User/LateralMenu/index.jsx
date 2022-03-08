@@ -49,11 +49,11 @@ export default function LateralMenu() {
               </li>
             </a>
           </Link>
-          <Link href="/usuario/configuracao">
-            <a href="/usuario/configuracao">
+          <Link href="/usuario/perfil">
+            <a href="/usuario/perfil">
               <li>
                 {IconConfig}
-                Configuração
+                Perfil
               </li>
             </a>
           </Link>

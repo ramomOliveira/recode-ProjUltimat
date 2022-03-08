@@ -3,17 +3,22 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   justify-content: center;
 
   > div {
-    width: 50%;
+    width: auto;
+  }
+
+  @media (min-width: 768px) {
+    > div {
+      width: 50%;
+    }
   }
 `;
 
 export const Title = styled.h1`
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 `;
@@ -36,7 +41,14 @@ export const Range = styled.hr`
 `;
 
 export const LoginOrRegister = styled.p`
-  margin-top: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const WrapperWarning = styled.div`

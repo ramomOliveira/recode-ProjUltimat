@@ -13,7 +13,7 @@ export const ImgAvatar = styled.div`
   height: 50px;
   margin-bottom: 10px;
   
-  background-image: url('/images/avatar.png');
+  background-image: ${props => `url(${props.imgAvatar})`};
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

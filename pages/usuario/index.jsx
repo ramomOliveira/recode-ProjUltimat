@@ -1,5 +1,7 @@
 import Head from 'next/head';
+import CardHome from '../../components/User/CardHome';
 import LayoutUser from '../../components/User/LayoutUser';
+import { Container } from '../../styles/user/style';
 
 export default function User() {
   return (
@@ -7,8 +9,14 @@ export default function User() {
       <Head>
         <title>Oluchi - Painel Admin</title>
       </Head>
-      <LayoutUser title="Olá, João!" subTitle="Estamos contruindo">
-        <h3>Conteudo</h3>
+      <LayoutUser title="Olá, João!" subTitle="Seus Eventos">
+        <Container>
+          <CardHome />
+          <CardHome />
+          <CardHome />
+          <CardHome />
+          <CardHome />
+        </Container>
       </LayoutUser>
     </>
   );

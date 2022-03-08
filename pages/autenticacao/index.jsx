@@ -8,7 +8,7 @@ import AuthContext from '../../context/AuthContext';
 import { Container, Title, WrapperButton, Range, LoginOrRegister, WrapperWarning } from '../../styles/authentication/style';
 
 export default function Authentication() {
-  const { loginGoogle, user } = useContext(AuthContext);
+  const { loginGoogle } = useContext(AuthContext);
 
   const [warning, setWarning] = useState('')
   const [modo, setModo] = useState('login');
