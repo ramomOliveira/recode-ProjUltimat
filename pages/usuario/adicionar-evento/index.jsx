@@ -1,8 +1,30 @@
 import LayoutUser from "../../../components/User/LayoutUser";
 import Head from 'next/head';
+import { useForm } from 'react-hook-form';
 import Button from '../../../components/Button';
 import { WrapperForm, WrapperButton } from '../../../styles/user/addEvent/style';
+import apiProd from "../../../lib/apiProd";
 export default function AddEvent() {
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const addEvent = (data) => {
+    apiProd.post('/event', {
+      ...data,
+    }).then(() => {
+
+    })
+      .catch(error => {
+        console.log(error)
+      })
+    reset()
+  }
+
   return (
     <>
       <Head>
@@ -11,13 +33,16 @@ export default function AddEvent() {
       <LayoutUser title="Adicione um Evento" subTitle="Adicione seus eventos">
 
 
-        <WrapperForm>
+        <WrapperForm onSubmit={handleSubmit(addEvent)}>
           <div>
             <h1>Informações do Evento</h1>
             <div>
               <div>
                 <h3>Nome:</h3>
-                <input type="text" />
+                <input type="text"
+
+                  {...register('name', { required: true })}
+                />
               </div>
               <div>
                 <h3>Horário:</h3>
@@ -84,7 +109,7 @@ export default function AddEvent() {
           </div>
 
           <WrapperButton>
-            <Button>Salvar Alterações</Button>
+            <Button type="submit">Salvar Alterações</Button>
           </WrapperButton>
         </WrapperForm>
 
