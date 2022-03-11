@@ -1,4 +1,8 @@
 import Head from 'next/head';
+import apiProd from '../../../lib/apiProd';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Button from '../../../components/Button';
 import LayoutUser from '../../../components/User/LayoutUser'
 import HeaderCalender from '../../../components/User/PageCalender/HeaderCalender';
@@ -6,6 +10,22 @@ import HeaderCalender from '../../../components/User/PageCalender/HeaderCalender
 import { WrapperListEvents, WrapperHeader, WrapperMain, WrapperButton, DivNone } from '../../../styles/user/calender/style';
 
 export default function Calender() {
+  const router = useRouter();
+  const [listEvents, setListEvents] = useState([])
+
+  useEffect(() => {
+    apiProd.get('/event').then((response) => {
+      setListEvents(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+  }, [])
+
+  const deleteEvent = () => {
+    apiProd.delete(`/event/${router.query.id}`);
+  };
+
+
   return (
     <>
       <Head>
@@ -23,24 +43,29 @@ export default function Calender() {
             <div />
           </WrapperHeader>
 
-          <WrapperMain>
-            <div>Casa mais Arte</div>
-            <DivNone>Vila Nova, Caxias-BH</DivNone>
-            <DivNone>22/07/2022</DivNone>
+          {listEvents?.map((item) => (
+            <WrapperMain key={item.id}>
+              <div>{item.name}</div>
+              <DivNone>{item.address}, {item.city} - {item.stateUf}</DivNone>
+              <DivNone>{item.dateEvent}</DivNone>
 
-            <WrapperButton>
-              <Button noPadding link>
-                <span class="material-icons-outlined">
-                  delete
-                </span>
-              </Button>
-              <Button noPadding link>
-                <span class="material-icons-outlined">
-                  edit
-                </span>
-              </Button>
-            </WrapperButton>
-          </WrapperMain>
+              <WrapperButton>
+                <Button onClick={() => deleteEvent(item.id)} noPadding link>
+                  <span class="material-icons-outlined">
+                    delete
+                  </span>
+                </Button>
+                <Link href={`/usuario/editar-evento/${item.id}`}>
+                  <Button noPadding link>
+                    <span class="material-icons-outlined">
+                      edit
+                    </span>
+                  </Button>
+                </Link>
+              </WrapperButton>
+            </WrapperMain>
+          ))}
+
         </WrapperListEvents>
       </LayoutUser>
     </>

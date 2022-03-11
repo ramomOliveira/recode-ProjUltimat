@@ -110,12 +110,9 @@ export function AuthProvider({ children }) {
     <AuthContext.Provider value={{
       user,
       loginGoogle,
-
-
       carregando,
       login,
       cadastrar,
-
       logout
 
     }}>

@@ -33,6 +33,9 @@ export default function Header() {
           <Link href="/categorias">
             <li>Categorias</li>
           </Link>
+          <Link href="/artistas">
+            <li>Artistas</li>
+          </Link>
         </ul>
       </WrapperLeft>
 

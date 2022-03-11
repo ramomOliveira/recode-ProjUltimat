@@ -6,11 +6,12 @@ import { IconHome, IconConfig, IconEvents, IconLogout } from '../../Icons'
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
 import AppContext from '../../../context/App';
-
+import AuthContext from '../../../context/AuthContext';
 import { Container, Logo, WrapperNavigation, WrapperLogout } from './style';
 import { IconLogo } from '../../Icons/logo';
 
 export default function LateralMenu() {
+  const { logout } = useContext(AuthContext);
   const { colors, title } = useContext(ThemeContext);
   const { toggleTheme } = useContext(AppContext);
   return (
@@ -63,7 +64,7 @@ export default function LateralMenu() {
         <WrapperLogout>
           <Link href="/">
 
-            <Button deleteMode>
+            <Button onClick={logout} deleteMode>
               {IconLogout}
               Sair
             </Button>

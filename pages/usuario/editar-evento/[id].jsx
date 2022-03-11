@@ -1,14 +1,17 @@
 import LayoutUser from "../../../components/User/LayoutUser";
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import Button from '../../../components/Button';
 import { WrapperForm, WrapperButton } from '../../../styles/user/addEvent/style';
 import apiProd from "../../../lib/apiProd";
 
 
-export default function AddEvent() {
+export default function EditEvent() {
   const router = useRouter();
+  const [event, setEvent] = useState({});
+
   const {
     register,
     control,
@@ -17,17 +20,47 @@ export default function AddEvent() {
     reset,
   } = useForm();
 
-  const addEvent = (data) => {
-    apiProd.post('/event', {
-      ...data,
-    }).then(() => {
-      router.push('/usuario/agenda')
-    })
-      .catch(error => {
+
+  useEffect(() => {
+    if (router.query.id) {
+      apiProd.get(`/event/${router.query.id}`).then(({ data }) => {
+        setEvent(data);
+        setValue("name", data.name);
+        setValue("hourEvent", data.hourEvent);
+        setValue("description", data.description);
+        setValue("city", data.city);
+        setValue("stateUf", data.stateUf);
+        setValue("address", data.address);
+        setValue("district", data.district);
+        setValue("address", data.address);
+        setValue("number", data.number);
+        setValue("dateEvent", data.dateEvent);
+        setValue("tel", data.tel);
+        setValue("email", data.email);
+
+      }).catch(error => {
         console.log(error)
       })
-    reset()
+    }
+  }, [router])
+
+  const editEvent = (data) => {
+    apiProd.put(`/event/${router.query.id}`, {
+      ...data,
+    }
+    ).then(() => {
+
+      router.push("/usuario/agenda");
+    })
+
   }
+
+  const deleteProduct = () => {
+    apiProd.delete(`/event/${router.query.id}`).then(() => {
+
+      router.push("/usuario/agenda");
+    });
+  };
 
   return (
     <>
@@ -37,7 +70,7 @@ export default function AddEvent() {
       <LayoutUser title="Adicione um Evento" subTitle="Adicione seus eventos">
 
 
-        <WrapperForm onSubmit={handleSubmit(addEvent)}>
+        <WrapperForm onSubmit={handleSubmit(editEvent)}>
           <div>
             <h1>Informações do Evento</h1>
             <div>

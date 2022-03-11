@@ -5,7 +5,7 @@ export default createGlobalStyle`
     --white: #FFFFFF;
     --black: #212121;
     --orange: #f49e0b;
-    --light-orange: rgb(252, 185, 69);
+    --light-orange: #fcb945;
     --red: #ff0000;
     
    
