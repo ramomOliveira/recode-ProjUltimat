@@ -4,7 +4,7 @@ export const Container = styled.div`
   padding-top: 50px;
   padding-bottom: 50px;
 
-  background-color: var(--orange);
+  background-color: var(--black);
 `;
 
 export const WrapperTop = styled.div`
@@ -21,6 +21,7 @@ export const WrapperTop = styled.div`
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    color: var(--orange);
   }
 
   @media (min-width: 768px) {
@@ -42,19 +43,24 @@ export const WrapperVertical = styled.div`
   }
 
   > input {
-    border: 1px solid var(--black);
+    border: 1px solid var(--white);
     border-radius: 4px;
     padding: 10px 16px;
     margin-top: 8px;
     max-width: 100%;
+    color: var(--white);
+    font-size: 16px;
   }
 
   > textarea {
-    border: 1px solid var(--black);
+    border: 1px solid var(--white);
     border-radius: 4px;
     padding: 10px 16px;
     margin-top: 8px;
     max-width: 100%;
+    color: var(--white);
+    font-size: 16px;
+  
   }
 `;
 

@@ -47,3 +47,5 @@ export const TextP = styled.p`
   font-size: 17px;
   line-height: 24px;
 `;
+
+export const IconImg = styled.div``;

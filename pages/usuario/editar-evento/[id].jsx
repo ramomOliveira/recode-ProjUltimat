@@ -18,6 +18,7 @@ export default function EditEvent() {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
 
 
@@ -167,6 +168,7 @@ export default function EditEvent() {
 
           <WrapperButton>
             <Button type="submit">Salvar Alterações</Button>
+            <Button type="button" onClick={deleteProduct} >Delete</Button>
           </WrapperButton>
         </WrapperForm>
 

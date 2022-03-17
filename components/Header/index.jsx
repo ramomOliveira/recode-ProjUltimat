@@ -13,7 +13,7 @@ export default function Header() {
       <WrapperLeft>
         <Link href="/">
           <div>
-            <img src="/images/logo.png" alt="" />
+            <img src="/images/logo2.png" alt="" />
             <p>Oluchi</p>
           </div>
         </Link>
@@ -40,10 +40,7 @@ export default function Header() {
       </WrapperLeft>
 
       <WrapperRight>
-        <div>
-          <input type="search" />
-          <span className="material-icons-outlined">search</span>
-        </div>
+
 
         <Link href="/autenticacao">
           <Button>Cadastrar</Button>

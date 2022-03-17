@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--orange);
+  background-color: var(--black);
   padding-top: 10px;
   padding-bottom: 10px;
 `;
@@ -27,6 +27,7 @@ export const WrapperLeft = styled.div`
       font-size: 30px;
       font-weight: 100;
       letter-spacing: 5px;
+      color: var(--white);
     }
   }
 
@@ -37,8 +38,9 @@ export const WrapperLeft = styled.div`
 
     > li {
       cursor: pointer;
+      color: var(--white);
       :hover {
-        color: var(--white);
+        color: var(--orange);
       }
     }
   }

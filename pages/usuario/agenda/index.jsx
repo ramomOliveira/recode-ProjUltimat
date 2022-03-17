@@ -13,16 +13,21 @@ export default function Calender() {
   const router = useRouter();
   const [listEvents, setListEvents] = useState([])
 
-  useEffect(() => {
+  const load = () => {
     apiProd.get('/event').then((response) => {
       setListEvents(response.data)
     }).catch(error => {
       console.log(error)
     })
+  }
+  useEffect(() => {
+    load()
   }, [])
 
-  const deleteEvent = () => {
-    apiProd.delete(`/event/${router.query.id}`);
+  const deleteEvent = (id) => {
+    apiProd.delete(`/event/${id}`).then(() => {
+      load()
+    })
   };
 
 

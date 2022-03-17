@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  margin-top: 100px;
+  margin-bottom: 100px;
   > div {
     width: auto;
   }
@@ -62,5 +63,22 @@ export const WrapperWarning = styled.div`
   > div {
     width: 20px;
     margin-right: 10px;
+  }
+`;
+
+export const ButtonGoogle = styled.div`
+  > button {
+    background-color: transparent;
+    color: var(--red);
+    border: 2px solid var(--red);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    :hover{
+
+    }
   }
 `;

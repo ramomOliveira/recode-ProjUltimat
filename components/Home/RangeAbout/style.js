@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: 
-    var(--orange);
+    var(--black);
 
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -22,7 +22,7 @@ export const WrapperLeft = styled.div`
     flex-direction: column;
     align-items: flex-start;
     font-size: 50px;
-
+    color: var(--orange);
     > span {
       color: var(--white);
     }
@@ -33,5 +33,6 @@ export const WrapperRight = styled.div`
   > p {
     font-size: 20px;
     line-height: 24px;
+    color: var(--white);
   }
 `;

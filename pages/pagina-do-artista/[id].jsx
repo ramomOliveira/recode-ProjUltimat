@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
 import apiProd from '../../lib/apiProd';
 
-import { Container, TitleH2, WrapperHeader, ImgArtist, TextP } from '../../styles/artist-page/style';
+import { Container, TitleH2, WrapperHeader, ImgArtist, TextP, IconImg } from '../../styles/artist-page/style';
 
 export default function PageArtist() {
   const [artist, setArtist] = useState({})
@@ -53,6 +53,11 @@ export default function PageArtist() {
           </div>
           <div>
             <TitleH2>Telefone para contato:</TitleH2>
+            <IconImg>
+              <span class="material-icons-outlined">
+                call
+              </span>
+            </IconImg>
             <TextP>(32) 9999-9999</TextP>
           </div>
 

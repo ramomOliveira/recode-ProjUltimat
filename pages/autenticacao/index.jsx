@@ -5,7 +5,7 @@ import { IconGoogle, IconWarning } from '../../components/Icons';
 import AuthInput from "../../components/Authentication/AuthInput";
 import AuthContext from '../../context/AuthContext';
 
-import { Container, Title, WrapperButton, Range, LoginOrRegister, WrapperWarning } from '../../styles/authentication/style';
+import { Container, Title, WrapperButton, ButtonGoogle, Range, LoginOrRegister, WrapperWarning } from '../../styles/authentication/style';
 
 export default function Authentication() {
   const { loginGoogle } = useContext(AuthContext);
@@ -69,12 +69,12 @@ export default function Authentication() {
 
         <Range />
 
-        <WrapperButton>
+        <ButtonGoogle>
           <Button onClick={loginGoogle}>
             {IconGoogle}
             Entrar com Google
           </Button>
-        </WrapperButton>
+        </ButtonGoogle>
 
         {modo === 'login' ? (
           <LoginOrRegister>
