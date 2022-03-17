@@ -1,9 +1,25 @@
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import CardHome from '../../components/User/CardHome';
 import LayoutUser from '../../components/User/LayoutUser';
 import { Container } from '../../styles/user/style';
+import apiProd from '../../lib/apiProd';
+import IconLoad from '../../components/IconLoad';
 
 export default function User() {
+  const [gifLoad, setGifLoad] = useState(true);
+  const [eventsCalender, setEventsCalender] = useState([]);
+
+  useEffect(() => {
+    apiProd.get('/event').then((response) => {
+      setEventsCalender(response.data)
+    }).catch(error => {
+      console.log(error)
+    }).finally(() => {
+      setGifLoad(false)
+    })
+  }, [])
+
   return (
     <>
       <Head>
@@ -11,11 +27,24 @@ export default function User() {
       </Head>
       <LayoutUser title="Olá, João!" subTitle="Seus Eventos">
         <Container>
-          <CardHome />
-          <CardHome />
-          <CardHome />
-          <CardHome />
-          <CardHome />
+          {gifLoad && (
+            <IconLoad />
+          )}
+          {eventsCalender.map((item) => (
+            <CardHome
+              key={item.id}
+              name={item.name}
+              address={item.address}
+              city={item.city}
+              stateUf={item.stateUf}
+              dateEvent={item.dateEvent}
+              hourEvent={item.hourEvent}
+              href={`/usuario/editar-evento/${item.id}`}
+              hrefA={`/usuario/editar-evento/${item.id}`}
+            />
+
+          ))}
+
         </Container>
       </LayoutUser>
     </>

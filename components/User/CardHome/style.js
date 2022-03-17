@@ -15,9 +15,11 @@ export const Container = styled.div`
 export const HeaderCard = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  > button {
+  > a >  button {
     color: white;
+    
     :hover {
       color: black;
     }

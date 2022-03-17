@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
 
+
 export default function Calendar() {
   return (
     <>
@@ -8,7 +9,7 @@ export default function Calendar() {
         <title>Oluchi - Agenda</title>
       </Head>
       <div>
-        <h1>Agenda</h1>
+        agenda
       </div>
     </>
   );

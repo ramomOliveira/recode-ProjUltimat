@@ -3,8 +3,9 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import Button from '../../../components/Button';
-import { WrapperForm, WrapperButton } from '../../../styles/user/addEvent/style';
+import { WrapperForm, WrapperButton, Wrapper, InfoAddress } from '../../../styles/user/addEvent/style';
 import apiProd from "../../../lib/apiProd";
+import ArrowBack from "../../../components/ArrowBack";
 
 
 export default function AddEvent() {
@@ -36,9 +37,12 @@ export default function AddEvent() {
       </Head>
       <LayoutUser title="Adicione um Evento" subTitle="Adicione seus eventos">
 
-
+        <ArrowBack
+          href="/usuario/agenda"
+          hrefA="/usuario/agenda"
+        />
         <WrapperForm onSubmit={handleSubmit(addEvent)}>
-          <div>
+          <Wrapper>
             <h1>Informações do Evento</h1>
             <div>
               <div>
@@ -55,20 +59,20 @@ export default function AddEvent() {
                 />
               </div>
             </div>
-          </div>
+          </Wrapper>
 
-          <div>
+          <Wrapper>
             <h1>Descrição</h1>
             <div>
               <textarea rows="10"
                 {...register('description', { required: false })}
               ></textarea>
             </div>
-          </div>
+          </Wrapper>
 
-          <div>
+          <Wrapper>
             <h1>Endereço</h1>
-            <div>
+            <InfoAddress>
               <div>
                 <h3>Cidade:</h3>
                 <input type="text"
@@ -81,9 +85,9 @@ export default function AddEvent() {
                   {...register('stateUf', { required: false })}
                 />
               </div>
-            </div>
+            </InfoAddress>
 
-            <div>
+            <InfoAddress>
               <div>
                 <h3>Rua:</h3>
                 <input type="text"
@@ -96,9 +100,9 @@ export default function AddEvent() {
                   {...register('district', { required: false })}
                 />
               </div>
-            </div>
+            </InfoAddress>
 
-            <div>
+            <InfoAddress>
               <div>
                 <h3>Número:</h3>
                 <input type="text"
@@ -111,10 +115,10 @@ export default function AddEvent() {
                   {...register('dateEvent', { required: false })}
                 />
               </div>
-            </div>
-          </div>
+            </InfoAddress>
+          </Wrapper>
 
-          <div>
+          <Wrapper>
             <h1>Informações de contato</h1>
             <div>
               <div>
@@ -130,7 +134,7 @@ export default function AddEvent() {
                 />
               </div>
             </div>
-          </div>
+          </Wrapper>
 
           <WrapperButton>
             <Button type="submit">Salvar Alterações</Button>

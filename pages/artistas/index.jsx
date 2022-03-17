@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import CardArtist from '../../components/CardArtist';
+import IconLoad from '../../components/IconLoad';
 import Layout from '../../components/Layout';
 import apiProd from '../../lib/apiProd';
 
@@ -30,9 +31,7 @@ export default function Artist() {
         <Title>Nossos Artistas</Title>
 
         {gifLoad && (
-          <WrapperLoad>
-            <img src="/images/gif-Load.gif" alt="tela de loading" />
-          </WrapperLoad>
+          <IconLoad />
         )}
 
         <WrapperCards>

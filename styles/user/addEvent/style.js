@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  
-`;
+
 
 export const WrapperForm = styled.form`
   border: 1px solid #BDBDBD;
@@ -16,10 +14,13 @@ export const WrapperForm = styled.form`
     width: min-content;
   }
 
-  > div {
+`;
+
+export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+
     > h1 {
       font-size: 25px;
       margin-bottom: 32px;
@@ -38,11 +39,10 @@ export const WrapperForm = styled.form`
           border: 1px solid ${(props) => props.theme.colors.textPrimary};
           border-radius: 4px;
           width: 100%;
-
+          color: ${(props) => props.theme.colors.textPrimary};
          
         }
       
-
       > div {
         width: 100%;
         > h3 {
@@ -57,13 +57,12 @@ export const WrapperForm = styled.form`
           border: 1px solid ${(props) => props.theme.colors.textPrimary};
           border-radius: 4px;
           min-width: 250px;
+          color: ${(props) => props.theme.colors.textPrimary};
 
           @media (min-width: 768px) {
             width: 400px;
           }
         }
-
-        
 
       }
 
@@ -71,11 +70,16 @@ export const WrapperForm = styled.form`
         flex-direction: row;
       }
     }
-  }
+`;
+
+export const InfoAddress = styled.div`
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 export const WrapperButton = styled.div`
   display: flex;
-  
-  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 40px;
+  gap: 16px;
 `;

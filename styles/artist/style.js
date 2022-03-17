@@ -13,12 +13,4 @@ export const WrapperCards = styled.div`
   margin-bottom: 50px;
 `;
 
-export const WrapperLoad = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  > img {
-    width: 100px;
-  }
-`;
+

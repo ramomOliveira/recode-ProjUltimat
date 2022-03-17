@@ -41,7 +41,7 @@ export const WrapperButton = styled.div`
 
 export const DivNone = styled.div`
   display: none;
-
+  line-height: 24px;
   @media (min-width: 768px) {
     display: flex;
   }
