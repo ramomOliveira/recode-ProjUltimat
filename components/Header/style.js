@@ -28,6 +28,10 @@ export const WrapperLeft = styled.div`
       font-weight: 100;
       letter-spacing: 5px;
       color: var(--white);
+
+      :hover {
+        color: var(--orange)
+      }
     }
   }
 

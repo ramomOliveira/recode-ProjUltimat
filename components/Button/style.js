@@ -16,7 +16,7 @@ const getColorBackground = (props) => {
   } else if (props.deleteMode) {
     return 'transparent'
   } else {
-    return 'var(--light-orange)'
+    return 'var(--orange)'
   }
 }
 

@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { useContext } from 'react';
 import CardContact from '../components/CardContact';
-import CardNews from '../components/Home/CardNews';
+import CardCarousel from '../components/Home/CardCarousel';
+
 import RangeAbout from '../components/Home/RangeAbout';
 import RangeCalender from '../components/Home/RangeCalender';
 import Layout from '../components/Layout';
@@ -19,7 +20,7 @@ export default function Home() {
         <title>Projeto - Oluchi</title>
       </Head>
       <Container>
-        <CardNews />
+        <CardCarousel />
         <RangeAbout />
         <RangeCalender />
         <CardContact />
