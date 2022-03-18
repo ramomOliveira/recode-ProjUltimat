@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  justify-content: space-between;
+  background-color: #000;
   @media (min-width: 768px) {
     display: none;
   }
@@ -12,13 +14,32 @@ export const WrapperButton = styled.div`
   gap: 10px;
 `;
 
+export const Logo = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  > img {
+    width: 50px;
+  }
+  > p {
+    font-family: 'Caesar Dressing', sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    color: var(--orange);
+    
+  }
+  
+`;
+
 export const styles = {
   bmBurgerButton: {
     position: 'relative',
     width: '36px',
     height: '30px',
     marginTop: '10px',
-    marginBottom: '-40px'
+
   },
   bmBurgerBars: {
     background: '#f49e0b',

@@ -3,10 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   border-radius: 4px;
   box-shadow: 0px 3px 6px #2121214d;
-  width: min-content;
-
+  width: 100%;
   :hover {
     box-shadow: 0px 3px 6px var(--light-orange);
+  }
+
+  @media (min-width: 768px) {
+    width: min-content;
   }
 `;
 
@@ -19,8 +22,13 @@ export const ImgArtist = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 300px;
+  width: 100%;
   height: 300px;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 export const WrapperInfo = styled.div`

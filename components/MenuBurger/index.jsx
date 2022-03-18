@@ -1,41 +1,53 @@
 import { slide as Menu } from 'react-burger-menu';
 import Link from 'next/link';
+import { useState } from 'react';
 import Button from '../Button';
-import { styles, Container, WrapperButton } from './style';
+import { styles, Container, WrapperButton, Logo } from './style';
 
 export default function MenuBurger() {
+  const [menu, setMenu] = useState();
+
+  const openMenu = () => {
+    setMenu(false)
+  }
   return (
     <Container className="margins">
-      <Menu styles={styles}>
-        <a href="/">
+      <Menu styles={styles} isOpen={menu}>
+        <a onClick={openMenu} href="/" >
           <Link href="/">Inicio</Link>
         </a>
 
-        <a href="/noticias">
+        <a onClick={openMenu} href="/noticias">
           <Link href="/noticias">Notícias</Link>
         </a>
 
-        <a href="/agenda">
+        <a onClick={openMenu} href="/agenda">
           <Link href="/agenda">Agenda</Link>
         </a>
 
-        <a href="/quem-somos">
+        <a onClick={openMenu} href="/quem-somos">
           <Link href="/quem-somos">Sobre</Link>
         </a>
 
-        <a href="/artistas">
+        <a onClick={openMenu} href="/artistas">
           <Link href="/artistas">Artistas</Link>
         </a>
 
         <WrapperButton>
-          <Button type="button">
+          <Button onClick={openMenu} type="button">
             <Link href="/autenticacao">Cadastrar</Link>
           </Button>
-          <Button type="button">
+          <Button onClick={openMenu} type="button">
             <Link href="/usuario">Login</Link>
           </Button>
         </WrapperButton>
       </Menu>
+      <Link href="/">
+        <Logo>
+          <img src="/images/logo2.png" alt="" />
+          <p>Oluchi</p>
+        </Logo>
+      </Link>
     </Container>
   );
 }

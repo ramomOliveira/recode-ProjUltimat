@@ -32,6 +32,10 @@ export const WrapperHeader = styled.div`
       margin-top: 8px;
     }
   }
+
+  @media (min-width: 768px) {
+    
+  }
 `;
 
 export const ImgArtist = styled.div`
@@ -39,8 +43,13 @@ export const ImgArtist = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const TextP = styled.p`
