@@ -11,6 +11,7 @@ export const WrapperCards = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 50px;
+  gap: 20px;
 `;
 
 

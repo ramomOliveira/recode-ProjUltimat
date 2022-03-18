@@ -45,6 +45,8 @@ export default function Artist() {
               stateUf={item.stateUf}
               email={item.email}
               tel={item.tel}
+              href={`/pagina-do-artista/${item.id}`}
+              hrefA={`/pagina-do-artista/${item.id}`}
             />
           ))}
         </WrapperCards>

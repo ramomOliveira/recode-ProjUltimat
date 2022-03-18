@@ -1,36 +1,36 @@
 import Link from 'next/link';
 
-import { Container, WrapperTop, WrapperInfo, ImgArtist } from './style';
+import { Container, WrapperTop, WrapperInfo, ImgArtist, Name, Profession, City, Email, Tel } from './style';
 
-export default function CardArtist({ name, profession, description, city, stateUf, email, tel }) {
+export default function CardArtist({ name, profession, city, stateUf, email, tel, href, hrefA }) {
   return (
-    <Link href="/">
-      <a href="/">
+    <Link href={href}>
+      <a href={hrefA}>
         <Container>
           <WrapperTop>
             <ImgArtist image="/images/img-page-artist.jpeg" />
           </WrapperTop>
           <WrapperInfo>
-            <div>
+            <Name>
               <h1>Nome:</h1>
               <p>{name}</p>
-            </div>
-            <div>
+            </Name>
+            <Profession>
               <h1>Profissão:</h1>
               <p>{profession}</p>
-            </div>
-            <div>
+            </Profession>
+            <City>
               <h1>Cidade</h1>
               <p>{city} / {stateUf}</p>
-            </div>
-            <div>
+            </City>
+            <Email>
               <h1>Email:</h1>
               <p>{email}</p>
-            </div>
-            <div>
+            </Email>
+            <Tel>
               <h1>Telefone para contato:</h1>
               <p>{tel}</p>
-            </div>
+            </Tel>
           </WrapperInfo>
         </Container>
       </a>
