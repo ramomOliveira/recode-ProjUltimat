@@ -73,37 +73,6 @@ export default function PageArtist() {
 
         </div>
 
-        {/* <div>
-          <div>
-            <h1>Nome:</h1>
-            <p>{artist.name}</p>
-          </div>
-          <div>
-            <h1>Profissão:</h1>
-            <p>{artist.profession}</p>
-          </div>
-          <div>
-            <h1>Um pouco sobre João:</h1>
-            <p>{artist.description}</p>
-          </div>
-          <div>
-            <h1>Cidade</h1>
-            <p>{artist.city}</p>
-          </div>
-          <div>
-            <h1>Estado</h1>
-            <p>{artist.stateUf}</p>
-          </div>
-          <div>
-            <h1>Email:</h1>
-            <p>{artist.email}</p>
-          </div>
-          <div>
-            <h1>Telefone para contato:</h1>
-            <p>{artist.tel}</p>
-          </div>
-
-        </div> */}
       </Container>
     </>
   );

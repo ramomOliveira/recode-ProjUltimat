@@ -25,7 +25,7 @@ export default function Header() {
             <li>Notícias</li>
           </Link>
           <Link href="/agenda">
-            <li>Agendas</li>
+            <li>Agenda</li>
           </Link>
           <Link href="/quem-somos">
             <li>Sobre</li>
