@@ -63,7 +63,7 @@ export default function PageArtist() {
           <div>
             <TitleH2>Telefone para contato:</TitleH2>
             <WrapperContact>
-              <a href={`https://web.whatsapp.com/send?phone=${artist.tel}`} target="_blank">
+              <a href={`https://wa.me/55${artist.tel}?text=Olá!`} target="_blank">
                 <IconTel>
                 </IconTel>
                 <TextP>{artist.tel}</TextP>
