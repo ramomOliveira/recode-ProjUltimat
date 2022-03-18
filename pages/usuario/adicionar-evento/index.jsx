@@ -137,7 +137,7 @@ export default function AddEvent() {
           </Wrapper>
 
           <WrapperButton>
-            <Button type="submit">Salvar Alterações</Button>
+            <Button type="submit">Adicionar</Button>
           </WrapperButton>
         </WrapperForm>
 
