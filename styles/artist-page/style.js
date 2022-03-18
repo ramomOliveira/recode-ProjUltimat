@@ -48,4 +48,48 @@ export const TextP = styled.p`
   line-height: 24px;
 `;
 
-export const IconImg = styled.div``;
+export const WrapperContact = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  > a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    :hover{
+      color: var(--orange);
+      >div {
+        background-image: url("/images/about/zapCor.svg");
+        cursor: pointer;
+      }
+    }    
+  }
+`;
+
+export const IconTel = styled.div`
+  background-image: url("/images/about/zapBlack.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+
+`;
+
+export const IconEmail = styled.div`
+background-image: url("/images/about/emailBlack.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  :hover {
+    background-image: url("/images/about/emailCor.svg");
+    cursor: pointer;
+  }
+`;
+
+export const WrapperAddress = styled.div`
+  display: flex;
+  gap: 30px;
+`;
