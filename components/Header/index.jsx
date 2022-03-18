@@ -30,9 +30,7 @@ export default function Header() {
           <Link href="/quem-somos">
             <li>Sobre</li>
           </Link>
-          <Link href="/categorias">
-            <li>Categorias</li>
-          </Link>
+
           <Link href="/artistas">
             <li>Artistas</li>
           </Link>
