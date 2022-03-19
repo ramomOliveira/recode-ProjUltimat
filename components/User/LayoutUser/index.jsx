@@ -1,12 +1,16 @@
 import LateralMenu from '../LateralMenu';
 import Title from '../Title';
 import Content from '../Content';
+import AuthenticationStrength from '../../Authentication/AuthenticationStrength';
 
 import { Container, Wrapper } from './style';
+import MenuBurgerUser from '../MenuBurgerUser';
 
 export default function LayoutUser({ title, subTitle, children }) {
   return (
+    // <AuthenticationStrength/>
     <Container>
+      <MenuBurgerUser />
       <LateralMenu />
 
       <Wrapper>
@@ -14,5 +18,6 @@ export default function LayoutUser({ title, subTitle, children }) {
         <Content>{children}</Content>
       </Wrapper>
     </Container>
+
   );
 }
