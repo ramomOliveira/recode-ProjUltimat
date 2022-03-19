@@ -16,10 +16,10 @@ export default function Configuration() {
     handleSubmit,
     formState: { errors },
     setValue,
-    reset,
+
   } = useForm();
 
-  const addArtist = (data) => {
+  const saveArtist = (data) => {
     apiProd.post('/artist', {
       ...data,
     }).then(() => {
@@ -28,28 +28,24 @@ export default function Configuration() {
       .catch(error => {
         console.log(error)
       })
-    reset()
+
   }
 
   useEffect(() => {
-    apiProd.get('/artist').then(({ data }) => {
-      setValue('name', data.name);
-      setValue('profession', data.profession);
-      setValue('description', data.description);
-      setValue('city', data.city);
-      setValue('stateUf', data.stateUf);
-      setValue('tel', data.tel);
-      setValue('email', data.email);
+    apiProd.get('/artist/profile').then(({ data }) => {
+      setValue('name', data?.name || user?.displayName);
+      setValue('profession', data?.profession);
+      setValue('description', data?.description);
+      setValue('city', data?.city);
+      setValue('stateUf', data?.stateUf);
+      setValue('tel', data?.tel);
+      setValue('email', data?.email || user?.email);
+
 
     });
   }, []);
 
-  const updateInfoArtist = (data) => {
-    apiProd.put('/artist', {
-      ...data,
-    });
 
-  };
 
   return (
     <>
@@ -58,14 +54,14 @@ export default function Configuration() {
       </Head>
       <LayoutUser title="Perfil da Página" subTitle="Edite, adicione suas informações para sua página no site">
 
-        <WrapperForm onSubmit={handleSubmit(addArtist)}>
+        <WrapperForm onSubmit={handleSubmit(saveArtist)}>
           <div>
             <h1>Informações gerais</h1>
             <div>
               <div>
                 <h3>Nome:</h3>
                 <input type="text"
-                  defaultValue={user?.displayName}
+                  defaultValue=""
                   {...register('name', { required: true })}
                 />
               </div>
@@ -117,7 +113,7 @@ export default function Configuration() {
               <div>
                 <h3>E-mail:</h3>
                 <input type="text"
-                  defaultValue={user?.email}
+                  defaultValue=""
                   {...register('email', { required: false })}
                 />
               </div>

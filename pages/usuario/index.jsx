@@ -13,7 +13,7 @@ export default function User() {
   const { user } = useContext(AuthContext)
 
   useEffect(() => {
-    apiProd.get('/event').then((response) => {
+    apiProd.get('/event/user').then((response) => {
       setEventsCalender(response.data)
     }).catch(error => {
       console.log(error)

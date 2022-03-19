@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 import { IconGoogle, IconWarning } from '../../components/Icons';
@@ -6,6 +6,7 @@ import AuthInput from "../../components/Authentication/AuthInput";
 import AuthContext from '../../context/AuthContext';
 
 import { Container, Title, WrapperButton, ButtonGoogle, Range, LoginOrRegister, WrapperWarning } from '../../styles/authentication/style';
+import router from 'next/router';
 
 export default function Authentication() {
   const { loginGoogle } = useContext(AuthContext);
@@ -29,6 +30,10 @@ export default function Authentication() {
       viewWarning('Ocorreu um erro no cadastro')
     }
   }
+
+  useEffect(() => {
+    setModo(router.query.action)
+  }, [router.query.action])
   return (
 
     <Container>
@@ -79,14 +84,14 @@ export default function Authentication() {
         {modo === 'login' ? (
           <LoginOrRegister>
             Novo por aqui?
-            <Button link underline onClick={() => setModo('register')}>
+            <Button link underline onClick={() => router.push('/autenticacao/register')}>
               Crie uma Conta Gratuitamente
             </Button>
           </LoginOrRegister>
         ) : (
           <LoginOrRegister>
             Já faz parte da nossa comunidade?
-            <Button link underline onClick={() => setModo('login')}>
+            <Button link underline onClick={() => router.push('/autenticacao/login')}>
               Entre com a suas Credenciais
             </Button>
           </LoginOrRegister>

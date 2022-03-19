@@ -11,6 +11,9 @@ async function userNormalized(userFirebase = firebase.User) {
   const {
     uid, displayName, email, providerData: [{ providerId }], photoURL
   } = userFirebase
+  Cookies.set("userId", uid, {
+    expires: 7
+  })
   return {
     uid,
     displayName,
@@ -28,6 +31,7 @@ function toManageCookie(logado) {
     })
   } else {
     Cookies.remove('admin-template-cod3r-auth')
+    Cookies.remove('userId')
   }
 }
 

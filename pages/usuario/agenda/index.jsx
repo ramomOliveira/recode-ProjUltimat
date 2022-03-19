@@ -14,7 +14,7 @@ export default function Calender() {
   const [listEvents, setListEvents] = useState([])
 
   const load = () => {
-    apiProd.get('/event').then((response) => {
+    apiProd.get('/event/user').then((response) => {
       setListEvents(response.data)
     }).catch(error => {
       console.log(error)

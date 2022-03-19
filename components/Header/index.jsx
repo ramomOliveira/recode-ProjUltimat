@@ -40,10 +40,10 @@ export default function Header() {
       <WrapperRight>
 
 
-        <Link href="/autenticacao">
+        <Link href="/autenticacao/register">
           <Button>Cadastrar</Button>
         </Link>
-        <Link href="/usuario">
+        <Link href="/autenticacao/login">
           <Button>Login</Button>
         </Link>
       </WrapperRight>
