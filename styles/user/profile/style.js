@@ -37,8 +37,11 @@ export const WrapperForm = styled.form`
           padding: 15px 16px;
           border: 1px solid ${(props) => props.theme.colors.textPrimary};
           border-radius: 4px;
-          width: 100%;
-
+          width: 250px;
+          color: ${(props) => props.theme.colors.textPrimary};
+          @media (min-width: 768px) {
+            width: 100%;
+          }
          
         }
       
@@ -57,7 +60,7 @@ export const WrapperForm = styled.form`
           border: 1px solid ${(props) => props.theme.colors.textPrimary};
           border-radius: 4px;
           min-width: 250px;
-
+          color: ${(props) => props.theme.colors.textPrimary};
           @media (min-width: 768px) {
             width: 400px;
           }

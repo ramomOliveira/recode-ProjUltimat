@@ -17,7 +17,7 @@ export const WrapperHeader = styled.div`
   border-bottom: 2px solid #BDBDBD;
   padding: 10px 30px;
   text-transform: uppercase;
-
+  color: ${(props) => props.theme.colors.textPrimary};
   @media (min-width: 768px) {
     grid-template-columns: 35% 35% 17% 13%;
   }
@@ -28,7 +28,7 @@ export const WrapperMain = styled.div`
   border-bottom: 1px solid #BDBDBD;
   padding: 10px 30px;
   align-items: center;
-
+  color: ${(props) => props.theme.colors.textPrimary};
   @media (min-width: 768px) {
     grid-template-columns: 35% 35% 17% 13%;
   }

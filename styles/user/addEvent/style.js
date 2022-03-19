@@ -38,7 +38,10 @@ export const Wrapper = styled.div`
           padding: 15px 16px;
           border: 1px solid ${(props) => props.theme.colors.textPrimary};
           border-radius: 4px;
-          width: 100%;
+          width: 250px;
+          @media (min-width: 768px) {
+            width: 100%;
+          }
           color: ${(props) => props.theme.colors.textPrimary};
          
         }
