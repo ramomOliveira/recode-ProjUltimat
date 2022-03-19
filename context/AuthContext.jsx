@@ -8,14 +8,17 @@ const AuthContext = createContext({});
 
 async function userNormalized(userFirebase = firebase.User) {
   const token = await userFirebase.getIdToken()
-  return (
-    userFirebase.uid,
-    userFirebase.displayName,
-    userFirebase.email,
+  const {
+    uid, displayName, email, providerData: [{ providerId }], photoURL
+  } = userFirebase
+  return {
+    uid,
+    displayName,
+    email,
     token,
-    userFirebase.providerData[0].providerId,
-    userFirebase.photoURL
-  );
+    providerId,
+    photoURL
+  };
 };
 
 function toManageCookie(logado) {

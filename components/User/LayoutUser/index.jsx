@@ -8,16 +8,16 @@ import MenuBurgerUser from '../MenuBurgerUser';
 
 export default function LayoutUser({ title, subTitle, children }) {
   return (
-    // <AuthenticationStrength/>
-    <Container>
-      <MenuBurgerUser />
-      <LateralMenu />
+    <AuthenticationStrength>
+      <Container>
+        <MenuBurgerUser />
+        <LateralMenu />
 
-      <Wrapper>
-        <Title title={title} subTitle={subTitle} />
-        <Content>{children}</Content>
-      </Wrapper>
-    </Container>
-
+        <Wrapper>
+          <Title title={title} subTitle={subTitle} />
+          <Content>{children}</Content>
+        </Wrapper>
+      </Container>
+    </AuthenticationStrength>
   );
 }

@@ -54,7 +54,7 @@ export default function LateralMenu() {
             <a href="/usuario/perfil">
               <li>
                 {IconConfig}
-                Perfil
+                Perfil da Página
               </li>
             </a>
           </Link>

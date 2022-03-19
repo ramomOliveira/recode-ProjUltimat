@@ -1,13 +1,15 @@
 import Head from 'next/head';
 import { useForm } from 'react-hook-form';
-import { useEffect } from 'react'
+import { useEffect, useContext } from 'react'
 import apiProd from '../../../lib/apiProd';
 import Button from '../../../components/Button';
 import LayoutUser from '../../../components/User/LayoutUser'
+import AuthContext from '../../../context/AuthContext';
 
 import { WrapperForm, WrapperButton } from '../../../styles/user/profile/style';
 
 export default function Configuration() {
+  const { user } = useContext(AuthContext)
   const {
     register,
     control,
@@ -52,9 +54,9 @@ export default function Configuration() {
   return (
     <>
       <Head>
-        <title>Oluchi - Painel Configuração</title>
+        <title>Oluchi - Painel da Página</title>
       </Head>
-      <LayoutUser title="Página Configuração" subTitle="Edite suas informações">
+      <LayoutUser title="Perfil da Página" subTitle="Edite, adicione suas informações para sua página no site">
 
         <WrapperForm onSubmit={handleSubmit(addArtist)}>
           <div>
@@ -63,6 +65,7 @@ export default function Configuration() {
               <div>
                 <h3>Nome:</h3>
                 <input type="text"
+                  defaultValue={user?.displayName}
                   {...register('name', { required: true })}
                 />
               </div>
@@ -114,6 +117,7 @@ export default function Configuration() {
               <div>
                 <h3>E-mail:</h3>
                 <input type="text"
+                  defaultValue={user?.email}
                   {...register('email', { required: false })}
                 />
               </div>

@@ -1,14 +1,16 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import CardHome from '../../components/User/CardHome';
 import LayoutUser from '../../components/User/LayoutUser';
 import { Container } from '../../styles/user/style';
 import apiProd from '../../lib/apiProd';
 import IconLoad from '../../components/IconLoad';
+import AuthContext from '../../context/AuthContext';
 
 export default function User() {
   const [gifLoad, setGifLoad] = useState(true);
   const [eventsCalender, setEventsCalender] = useState([]);
+  const { user } = useContext(AuthContext)
 
   useEffect(() => {
     apiProd.get('/event').then((response) => {
@@ -25,11 +27,12 @@ export default function User() {
       <Head>
         <title>Oluchi - Painel Admin</title>
       </Head>
-      <LayoutUser title="Olá, João!" subTitle="Seus Eventos">
+      <LayoutUser title={`Olá, ${user?.displayName}`} subTitle="Seus Eventos">
+        {gifLoad && (
+          <IconLoad />
+        )}
         <Container>
-          {gifLoad && (
-            <IconLoad />
-          )}
+
           {eventsCalender.map((item) => (
             <CardHome
               key={item.id}
