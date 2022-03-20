@@ -7,6 +7,16 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     display: none;
   }
+  
+`;
+
+export const AHerf = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  > span {
+    font-size: 30px;
+  }
 `;
 
 export const WrapperButton = styled.div`
@@ -41,16 +51,10 @@ export const Logo = styled.div`
 
 export const WrapperLogout = styled.div`
   display: flex;
-  flex-direction: column;
-  
+  color: red;
+  align-items: center;
   margin-bottom: 20px;
-  
-  > a > li {
-    color: red;
-    :hover {
-    color: red;
-    }
-  }
+  gap: 10px;
   
 `;
 

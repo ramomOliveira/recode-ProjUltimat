@@ -8,20 +8,24 @@ export const Container = styled.div`
   background-blend-mode: darken;
   display: flex;
   flex-direction: column;
-  width: min-content;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 350px;
   color: var(--white);
   text-transform: uppercase;
-  padding: 16px;
+  padding: 10px;
 
   > h1 {
     font-size: 32px;
-    margin-bottom: 8px;
-  }
-  > h2 {
-    font-size: 28px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
   > p {
+    font-size: 23px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  > h2 {
     font-size: 16px;
     margin-bottom: 16px;
   }

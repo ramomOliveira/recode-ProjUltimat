@@ -67,7 +67,7 @@ export default function Authentication() {
         />
 
         <WrapperButton>
-          <Button onClick={submitLogin}>
+          <Button blackMode onClick={submitLogin}>
             {modo === 'login' ? 'Entrar' : 'Cadastrar'}
           </Button>
         </WrapperButton>

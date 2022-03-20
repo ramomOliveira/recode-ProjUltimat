@@ -1,13 +1,16 @@
 import { Container } from './style';
+import Link from 'next/link';
 
-export default function CardCalender({ imageUrl }) {
+export default function CardCalender({ href, hrefA, imageUrl, name, address, city, dateEvent, hourEvent }) {
   return (
-    <Container image={imageUrl}>
-      <h2>Espetáculo teatral</h2>
-      <h1>tudo que é imaginário existe, é e tem</h1>
-      <p>Online e Presencial</p>
-      <p>Oficina cultural oswald de andrade</p>
-      <p>10 e 11 26/12/2021</p>
-    </Container>
+    <Link href={href}>
+      <a href={hrefA}>
+        <Container image={imageUrl}>
+          <h1>{name}</h1>
+          <p>{address} - {city}</p>
+          <h2>{dateEvent} ás {hourEvent}</h2>
+        </Container>
+      </a>
+    </Link>
   );
 }

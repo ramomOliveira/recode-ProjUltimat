@@ -63,11 +63,13 @@ export default function LateralMenu() {
         </ul>
         <WrapperLogout>
           <Link href="/">
+            <a href="/">
 
-            <Button onClick={logout} deleteMode>
-              {IconLogout}
-              Sair
-            </Button>
+              <Button onClick={logout} deleteMode>
+                {IconLogout}
+                Sair
+              </Button>
+            </a>
 
           </Link>
         </WrapperLogout>

@@ -35,6 +35,8 @@ const getHoverBackground = (props) => {
     return 'transparent'
   } else if (props.deleteMode) {
     return 'transparent'
+  } else if (props.blackMode) {
+    return 'var(--black)'
   } else {
     return 'var(--white)'
   }

@@ -68,9 +68,9 @@ export const WrapperWarning = styled.div`
 
 export const ButtonGoogle = styled.div`
   > button {
-    background-color: transparent;
+    background-color: black;
     color: var(--red);
-    border: 2px solid var(--red);
+    
     width: 100%;
     display: flex;
     align-items: center;
@@ -78,7 +78,8 @@ export const ButtonGoogle = styled.div`
     gap: 10px;
     
     :hover{
-
+      background-color: rgba(0, 0, 0, 0.9);
+      
     }
   }
 `;
