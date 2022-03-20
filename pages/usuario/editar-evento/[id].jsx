@@ -172,7 +172,7 @@ export default function EditEvent() {
 
           <WrapperButton>
             <Button deleteMode type="button" onClick={deleteProduct} >Delete</Button>
-            <Button type="submit">Salvar Alterações</Button>
+            <Button blackMode type="submit">Salvar Alterações</Button>
           </WrapperButton>
         </WrapperForm>
 

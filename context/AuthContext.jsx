@@ -99,6 +99,7 @@ export function AuthProvider({ children }) {
       setCarregando(true)
       await firebase.auth().signOut()
       await configureSession(null)
+      route.push('/')
     } finally {
       setCarregando(false)
     }

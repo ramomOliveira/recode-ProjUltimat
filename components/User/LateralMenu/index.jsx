@@ -65,7 +65,7 @@ export default function LateralMenu() {
           <Link href="/">
             <a href="/">
 
-              <Button onClick={logout} deleteMode>
+              <Button onClick={logout} deleteMode >
                 {IconLogout}
                 Sair
               </Button>

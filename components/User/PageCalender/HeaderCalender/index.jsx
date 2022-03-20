@@ -9,7 +9,7 @@ export default function HeaderCalender() {
         <input type="search" />
         <Button link >Buscar</Button>
       </WrapperSearch>
-      <Link href="/usuario/adicionar-evento"><Button>Adicionar Evento</Button></Link>
+      <Link href="/usuario/adicionar-evento"><Button blackMode >Adicionar Evento</Button></Link>
     </Container>
   )
 }

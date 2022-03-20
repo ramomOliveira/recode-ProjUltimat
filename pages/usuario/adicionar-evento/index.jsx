@@ -137,7 +137,7 @@ export default function AddEvent() {
           </Wrapper>
 
           <WrapperButton>
-            <Button type="submit">Adicionar</Button>
+            <Button blackMode type="submit">Adicionar</Button>
           </WrapperButton>
         </WrapperForm>
 

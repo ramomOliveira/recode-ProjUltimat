@@ -121,7 +121,7 @@ export default function Configuration() {
           </div>
 
           <WrapperButton>
-            <Button type="submit">Salvar Alterações</Button>
+            <Button blackMode type="submit">Salvar Alterações</Button>
           </WrapperButton>
         </WrapperForm>
       </LayoutUser>

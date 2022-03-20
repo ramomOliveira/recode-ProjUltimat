@@ -64,10 +64,11 @@ export const WrapperLogout = styled.div`
   margin-bottom: 20px;
   
 
-  > a > li {
-    color: red;
+  > a > button {
+    color: #8B0000  ;
     :hover {
-    color: red;
+    background-color: transparent;
+    color: var(--red);
     }
   }
   

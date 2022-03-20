@@ -19,10 +19,18 @@ export default function Calendar() {
         <title>Oluchi - Agenda</title>
       </Head>
       <Container className="margins">
-        <CardEvents
-          href="/"
-          hrefA="/"
-        />
+        {events.map((item) => (
+          <CardEvents
+            key={item.id}
+            href={`/evento/${item.id}`}
+            hrefA={`/evento/${item.id}`}
+            name={item.name}
+            city={item.city}
+            stateUf={item.stateUf}
+            tel={item.tel}
+          />
+        ))}
+
       </Container>
     </>
   );

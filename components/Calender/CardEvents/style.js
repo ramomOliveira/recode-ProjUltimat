@@ -37,36 +37,23 @@ export const WrapperInfo = styled.div`
 
 export const Name = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
   > h1 {
     text-transform: uppercase;
+    font-size: 30px;
   }
-  > p {
-    font-size: 20px;
-    font-weight: bold;
-  }
+  
 `;
 
-export const Profession = styled.div`
-display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  > h1 {
-    text-transform: uppercase;
-  }
-  > p {
-    font-size: 20px;
-    font-weight: bold;
-  }
-`;
+
 
 export const City = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   > h1 {
     text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   > p {
     font-size: 17px;
@@ -74,21 +61,13 @@ export const City = styled.div`
   }
 `;
 
-export const Email = styled.div`
-margin-bottom: 10px;
-  > h1 {
-    text-transform: uppercase;
-  }
-  > p {
-    font-size: 17px;
-    font-weight: bold;
-  }
-`;
 
 export const Tel = styled.div`
-margin-bottom: 10px;
+margin-bottom: 15px;
   > h1 {
     text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   > p {
     font-size: 17px;
