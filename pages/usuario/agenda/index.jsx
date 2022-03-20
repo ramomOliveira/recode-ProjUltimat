@@ -6,10 +6,12 @@ import { useRouter } from 'next/router';
 import Button from '../../../components/Button';
 import LayoutUser from '../../../components/User/LayoutUser'
 import HeaderCalender from '../../../components/User/PageCalender/HeaderCalender';
+import IconLoad from '../../components/IconLoad';
 
 import { WrapperListEvents, WrapperHeader, WrapperMain, WrapperButton, DivNone } from '../../../styles/user/calender/style';
 
 export default function Calender() {
+  const [gifLoad, setGifLoad] = useState(true);
   const router = useRouter();
   const [listEvents, setListEvents] = useState([])
 
@@ -18,6 +20,8 @@ export default function Calender() {
       setListEvents(response.data)
     }).catch(error => {
       console.log(error)
+    }).finally(() => {
+      setGifLoad(false)
     })
   }
   useEffect(() => {
@@ -47,7 +51,9 @@ export default function Calender() {
             <DivNone>Data</DivNone>
             <div />
           </WrapperHeader>
-
+          {gifLoad && (
+            <IconLoad />
+          )}
           {listEvents?.map((item) => (
             <WrapperMain key={item.id}>
               <div>{item.name}</div>

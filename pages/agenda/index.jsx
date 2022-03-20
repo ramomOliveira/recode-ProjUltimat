@@ -4,13 +4,19 @@ import CardEvents from '../../components/Calender/CardEvents';
 import Layout from '../../components/Layout';
 import { Container } from '../../styles/calendar/style';
 import apiProd from '../../lib/apiProd';
+import IconLoad from '../../components/IconLoad';
 
 export default function Calendar() {
+  const [gifLoad, setGifLoad] = useState(true);
   const [events, setEvents] = useState([])
 
   useEffect(() => {
     apiProd.get("/event").then((response) => {
       setEvents(response.data)
+    }).catch(error => {
+      console.log(error)
+    }).finally(() => {
+      setGifLoad(false)
     })
   }, [])
   return (
@@ -19,6 +25,9 @@ export default function Calendar() {
         <title>Oluchi - Agenda</title>
       </Head>
       <Container className="margins">
+        {gifLoad && (
+          <IconLoad />
+        )}
         {events.map((item) => (
           <CardEvents
             key={item.id}

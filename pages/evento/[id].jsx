@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import apiProd from '../../lib/apiProd';
+import IconLoad from '../../components/IconLoad';
 
 export default function Event() {
+  const [gifLoad, setGifLoad] = useState(true);
   const router = useRouter();
   const [event, setEvent] = useState({})
 
@@ -13,6 +15,8 @@ export default function Event() {
       setEvent(response.data)
     }).catch(error => {
       console.log(error)
+    }).finally(() => {
+      setGifLoad(false)
     })
   }, [router])
   return (
@@ -21,6 +25,9 @@ export default function Event() {
         <title>Oluchi - Artistas</title>
       </Head>
       <div>
+        {gifLoad && (
+          <IconLoad />
+        )}
         <h1>Ola mundo</h1>
       </div>
     </>

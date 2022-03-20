@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import CardCalender from '../CardCalender';
 import apiProd from '../../../lib/apiProd';
+import IconLoad from '../../../components/IconLoad';
 
 import { Container, Wrapper, WrapperCards } from './style';
 
@@ -13,6 +14,7 @@ const arrayImage = [
 ];
 
 export default function RangeCalender() {
+  const [gifLoad, setGifLoad] = useState(true);
   const [listEvents, setListEvents] = useState([])
 
   const load = () => {
@@ -20,6 +22,8 @@ export default function RangeCalender() {
       setListEvents(response.data)
     }).catch(error => {
       console.log(error)
+    }).finally(() => {
+      setGifLoad(false)
     })
   }
   useEffect(() => {
@@ -37,6 +41,9 @@ export default function RangeCalender() {
       </Wrapper>
 
       <WrapperCards>
+        {gifLoad && (
+          <IconLoad />
+        )}
         {listEvents.map((item) => (
           <CardCalender
             key={item.id}

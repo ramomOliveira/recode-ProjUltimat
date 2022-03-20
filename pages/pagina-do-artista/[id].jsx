@@ -3,10 +3,12 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import apiProd from '../../lib/apiProd';
+import IconLoad from '../../components/IconLoad';
 
 import { Container, TitleH2, WrapperHeader, ImgArtist, TextP, WrapperContact, IconTel, IconEmail, WrapperAddress } from '../../styles/artist-page/style';
 
 export default function PageArtist() {
+  const [gifLoad, setGifLoad] = useState(true);
   const router = useRouter();
   const [artist, setArtist] = useState({})
 
@@ -15,6 +17,8 @@ export default function PageArtist() {
       setArtist(response.data)
     }).catch(error => {
       console.log(error)
+    }).finally(() => {
+      setGifLoad(false)
     })
   }, [router])
 
@@ -24,7 +28,9 @@ export default function PageArtist() {
         <title>Oluchi - Artistas</title>
       </Head>
       <Container className="margins">
-
+        {gifLoad && (
+          <IconLoad />
+        )}
         <div>
           <WrapperHeader>
             <h1>{artist.name}</h1>
