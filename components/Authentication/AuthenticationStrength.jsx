@@ -19,7 +19,7 @@ export default function AuthenticationStrength({ children }) {
             dangerouslySetInnerHTML={{
               __html: `
               if(!document.cookie?.includes("admin-template-cod3r-auth")){
-                  window.location.href = "/autenticacao"
+                  window.location.href = "/autenticacao/login"
               }
           `
             }}
@@ -43,7 +43,7 @@ export default function AuthenticationStrength({ children }) {
   } else if (carregando) {
     return renderLoading()
   } else {
-    router.push("/autenticacao")
+    router.push("/autenticacao/login")
     return null
   }
 

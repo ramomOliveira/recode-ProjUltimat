@@ -1,44 +1,51 @@
 import { slide as Menu } from 'react-burger-menu';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useState } from 'react';
 import Button from '../Button';
 import { styles, Container, WrapperButton, Logo } from './style';
 
 export default function MenuBurger() {
-  const [menu, setMenu] = useState();
+  const router = useRouter();
+  const [menu, setMenu] = useState(false);
 
-  const openMenu = () => {
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    router.push(event.target.href)
     setMenu(false)
   }
+
   return (
     <Container className="margins">
-      <Menu styles={styles} isOpen={menu}>
-        <a onClick={openMenu} href="/" >
-          <Link href="/">Inicio</Link>
+      <Menu styles={styles} onStateChange={(state) => setMenu(state.isOpen)} isOpen={menu}>
+
+        <a onClick={handleClick} href="/" >
+          Inicio
         </a>
 
-        <a onClick={openMenu} href="/noticias">
-          <Link href="/noticias">Notícias</Link>
+        <a onClick={handleClick} href="/noticias">
+          Notícias
         </a>
 
-        <a onClick={openMenu} href="/agenda">
-          <Link href="/agenda">Agenda</Link>
+        <a onClick={handleClick} href="/agenda">
+          Agenda
         </a>
 
-        <a onClick={openMenu} href="/quem-somos">
-          <Link href="/quem-somos">Sobre</Link>
+        <a onClick={handleClick} href="/quem-somos">
+          Sobre
         </a>
 
-        <a onClick={openMenu} href="/artistas">
-          <Link href="/artistas">Artistas</Link>
+        <a onClick={handleClick} href="/artistas">
+          Artistas
         </a>
 
         <WrapperButton>
-          <Button onClick={openMenu} type="button">
-            <Link href="/autenticacao">Cadastrar</Link>
+          <Button type="button">
+            <Link href="/autenticacao/register">Cadastrar</Link>
           </Button>
-          <Button onClick={openMenu} type="button">
-            <Link href="/usuario">Login</Link>
+          <Button type="button">
+            <Link href="/autenticacao/login">Login</Link>
           </Button>
         </WrapperButton>
       </Menu>

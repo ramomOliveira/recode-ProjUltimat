@@ -5,6 +5,8 @@ import Layout from '../../components/Layout';
 import apiProd from '../../lib/apiProd';
 import IconLoad from '../../components/IconLoad';
 
+import { } from '../../styles/event/style';
+
 export default function Event() {
   const [gifLoad, setGifLoad] = useState(true);
   const router = useRouter();

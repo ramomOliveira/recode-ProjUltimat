@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form';
 import Button from '../../../components/Button';
-import { WrapperForm, WrapperButton, Wrapper, InfoAddress } from '../../../styles/user/addEvent/style';
+import { WrapperForm, WrapperButton, Wrapper, Info } from '../../../styles/user/addEvent/style';
 import apiProd from "../../../lib/apiProd";
 import ArrowBack from '../../../components/ArrowBack';
 
@@ -29,6 +29,8 @@ export default function EditEvent() {
         setEvent(data);
         setValue("name", data.name);
         setValue("hourEvent", data.hourEvent);
+        setValue("nameArtist", data.nameArtist);
+        setValue("prece", data.prece)
         setValue("description", data.description);
         setValue("city", data.city);
         setValue("stateUf", data.stateUf);
@@ -78,7 +80,7 @@ export default function EditEvent() {
         <WrapperForm onSubmit={handleSubmit(editEvent)}>
           <Wrapper>
             <h1>Informações do Evento</h1>
-            <div>
+            <Info>
               <div>
                 <h3>Nome:</h3>
                 <input type="text"
@@ -92,7 +94,24 @@ export default function EditEvent() {
                   {...register('hourEvent', { required: false })}
                 />
               </div>
-            </div>
+            </Info>
+
+            <Info>
+              <div>
+                <h3>Seu nome ou seu nome Artístico:</h3>
+                <input type="text"
+                  {...register('nameArtist', { required: true })}
+                />
+              </div>
+              <div>
+                <h3>Preço da entrada:</h3>
+                <input
+                  placeholder="Ex: Entrada Gratis ou R$ 50,00"
+                  type="text"
+                  {...register('prece', { required: false })}
+                />
+              </div>
+            </Info>
           </Wrapper>
 
           <Wrapper>
@@ -106,7 +125,7 @@ export default function EditEvent() {
 
           <Wrapper>
             <h1>Local do Evento</h1>
-            <InfoAddress>
+            <Info>
               <div>
                 <h3>Cidade:</h3>
                 <input type="text"
@@ -119,9 +138,9 @@ export default function EditEvent() {
                   {...register('stateUf', { required: false })}
                 />
               </div>
-            </InfoAddress>
+            </Info>
 
-            <InfoAddress>
+            <Info>
               <div>
                 <h3>Rua:</h3>
                 <input type="text"
@@ -134,9 +153,9 @@ export default function EditEvent() {
                   {...register('district', { required: false })}
                 />
               </div>
-            </InfoAddress>
+            </Info>
 
-            <InfoAddress>
+            <Info>
               <div>
                 <h3>Número:</h3>
                 <input type="text"
@@ -149,7 +168,7 @@ export default function EditEvent() {
                   {...register('dateEvent', { required: false })}
                 />
               </div>
-            </InfoAddress>
+            </Info>
           </Wrapper>
 
           <Wrapper>
