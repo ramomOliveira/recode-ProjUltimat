@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import CardEvents from '../../components/Calender/CardEvents';
 import Layout from '../../components/Layout';
-import { Container } from '../../styles/calendar/style';
+import { Container, WrapperEvents } from '../../styles/calendar/style';
 import apiProd from '../../lib/apiProd';
 import IconLoad from '../../components/IconLoad';
 
@@ -25,20 +25,23 @@ export default function Calendar() {
         <title>Oluchi - Agenda</title>
       </Head>
       <Container className="margins">
+        <h1>Eventos</h1>
         {gifLoad && (
           <IconLoad />
         )}
-        {events.map((item) => (
-          <CardEvents
-            key={item.id}
-            href={`/evento/${item.id}`}
-            hrefA={`/evento/${item.id}`}
-            name={item.name}
-            city={item.city}
-            stateUf={item.stateUf}
-            tel={item.tel}
-          />
-        ))}
+        <WrapperEvents>
+          {events.map((item) => (
+            <CardEvents
+              key={item.id}
+              href={`/evento/${item.id}`}
+              hrefA={`/evento/${item.id}`}
+              name={item.name}
+              city={item.city}
+              stateUf={item.stateUf}
+              tel={item.tel}
+            />
+          ))}
+        </WrapperEvents>
 
       </Container>
     </>

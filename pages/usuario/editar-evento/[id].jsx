@@ -105,7 +105,7 @@ export default function EditEvent() {
           </Wrapper>
 
           <Wrapper>
-            <h1>Endereço</h1>
+            <h1>Local do Evento</h1>
             <InfoAddress>
               <div>
                 <h3>Cidade:</h3>
