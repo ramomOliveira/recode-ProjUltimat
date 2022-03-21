@@ -73,7 +73,7 @@ export function AuthProvider({ children }) {
         .createUserWithEmailAndPassword(email, senha)
 
       await configureSession(resp.user)
-      route.push('/')
+      route.push('/usuario')
     } finally {
       setCarregando(false)
     }

@@ -9,7 +9,7 @@ import { Container, Title, WrapperButton, ButtonGoogle, Range, LoginOrRegister, 
 import router from 'next/router';
 
 export default function Authentication() {
-  const { loginGoogle } = useContext(AuthContext);
+  const { cadastrar, login, loginGoogle } = useContext(AuthContext);
 
   const [warning, setWarning] = useState('')
   const [modo, setModo] = useState('login');
@@ -21,14 +21,19 @@ export default function Authentication() {
     setTimeout(() => setWarning(null), time * 1000)
   }
 
-  const submitLogin = () => {
-    if (modo === 'login') {
-      console.log("login")
-      viewWarning('Ocorreu um erro no login')
-    } else {
-      console.log("register")
-      viewWarning('Ocorreu um erro no cadastro')
+  async function submitLogin() {
+    try {
+      if (modo === 'login') {
+        await login(email, password)
+
+      } else {
+        await cadastrar(email, password)
+
+      }
+    } catch (e) {
+      viewWarning(e?.message ?? 'Error desconhecido!')
     }
+
   }
 
   useEffect(() => {
