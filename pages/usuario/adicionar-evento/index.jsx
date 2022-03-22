@@ -1,14 +1,18 @@
 import LayoutUser from "../../../components/User/LayoutUser";
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import Button from '../../../components/Button';
-import { WrapperForm, WrapperButton, Wrapper, Info } from '../../../styles/user/addEvent/style';
 import apiProd from "../../../lib/apiProd";
 import ArrowBack from "../../../components/ArrowBack";
+import AppContext from '../../../context/App';
+
+import { WrapperForm, WrapperButton, Wrapper, Info } from '../../../styles/user/addEvent/style';
 
 
 export default function AddEvent() {
+  const { showModalSuccess } = useContext(AppContext);
   const router = useRouter();
   const {
     register,
@@ -23,6 +27,7 @@ export default function AddEvent() {
       ...data,
     }).then(() => {
       router.push('/usuario/agenda')
+      showModalSuccess("Evento Adicionado com Sucesso!");
     })
       .catch(error => {
         console.log(error)

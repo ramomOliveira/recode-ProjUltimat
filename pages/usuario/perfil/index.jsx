@@ -5,10 +5,12 @@ import apiProd from '../../../lib/apiProd';
 import Button from '../../../components/Button';
 import LayoutUser from '../../../components/User/LayoutUser'
 import AuthContext from '../../../context/AuthContext';
+import AppContext from '../../../context/App';
 
 import { WrapperForm, WrapperButton } from '../../../styles/user/profile/style';
 
 export default function Configuration() {
+  const { showModalSuccess } = useContext(AppContext);
   const { user } = useContext(AuthContext)
   const {
     register,
@@ -23,7 +25,7 @@ export default function Configuration() {
     apiProd.post('/artist', {
       ...data,
     }).then(() => {
-
+      showModalSuccess("Alterações Salvas com Sucesso!");
     })
       .catch(error => {
         console.log(error)

@@ -1,15 +1,18 @@
 import LayoutUser from "../../../components/User/LayoutUser";
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useForm } from 'react-hook-form';
 import Button from '../../../components/Button';
-import { WrapperForm, WrapperButton, Wrapper, Info } from '../../../styles/user/addEvent/style';
 import apiProd from "../../../lib/apiProd";
 import ArrowBack from '../../../components/ArrowBack';
+import AppContext from '../../../context/App';
+
+import { WrapperForm, WrapperButton, Wrapper, Info } from '../../../styles/user/addEvent/style';
 
 
 export default function EditEvent() {
+  const { showModalSuccess } = useContext(AppContext);
   const router = useRouter();
   const [event, setEvent] = useState({});
 
@@ -55,6 +58,7 @@ export default function EditEvent() {
     ).then(() => {
 
       router.push("/usuario/agenda");
+      showModalSuccess("Evento Alterado com Sucesso!")
     })
 
   }
@@ -63,6 +67,7 @@ export default function EditEvent() {
     apiProd.delete(`/event/${router.query.id}`).then(() => {
 
       router.push("/usuario/agenda");
+      showModalSuccess("Evento Excluído com Sucesso!")
     });
   };
 

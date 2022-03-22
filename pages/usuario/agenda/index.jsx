@@ -1,16 +1,18 @@
 import Head from 'next/head';
 import apiProd from '../../../lib/apiProd';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Button from '../../../components/Button';
 import LayoutUser from '../../../components/User/LayoutUser'
 import HeaderCalender from '../../../components/User/PageCalender/HeaderCalender';
 import IconLoad from '../../../components/IconLoad';
+import AppContext from '../../../context/App';
 
 import { WrapperListEvents, WrapperHeader, WrapperMain, WrapperButton, DivNone } from '../../../styles/user/calender/style';
 
 export default function Calender() {
+  const { showModalSuccess } = useContext(AppContext);
   const [gifLoad, setGifLoad] = useState(true);
   const router = useRouter();
   const [listEvents, setListEvents] = useState([])
@@ -31,6 +33,7 @@ export default function Calender() {
   const deleteEvent = (id) => {
     apiProd.delete(`/event/${id}`).then(() => {
       load()
+      showModalSuccess("Evento Excluído com Sucesso!")
     })
   };
 
