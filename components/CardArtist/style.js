@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     width: min-content;
-    height: 500px;
+    height: 550px;
   }
 `;
 
@@ -52,7 +52,7 @@ export const Name = styled.div`
 `;
 
 export const Profession = styled.div`
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
@@ -60,7 +60,7 @@ display: flex;
     text-transform: uppercase;
   }
   > p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
   }
 `;
@@ -71,7 +71,7 @@ export const City = styled.div`
     text-transform: uppercase;
   }
   > p {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
   }
 `;
@@ -82,7 +82,7 @@ margin-bottom: 10px;
     text-transform: uppercase;
   }
   > p {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
   }
 `;
@@ -93,7 +93,7 @@ margin-bottom: 10px;
     text-transform: uppercase;
   }
   > p {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
   }
 `;
