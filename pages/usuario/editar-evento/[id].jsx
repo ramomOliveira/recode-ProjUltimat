@@ -90,6 +90,7 @@ export default function EditEvent() {
               <div>
                 <h3>Nome:</h3>
                 <input type="text"
+                  placeholder="Ex: Música ao Vivo"
                   {...register('name', { required: true })}
                 />
                 <AlertMessage>
@@ -100,6 +101,7 @@ export default function EditEvent() {
                 <h3>Horário:</h3>
                 <input
                   type="text"
+                  placeholder="Ex: 19:00"
                   {...register('hourEvent', { required: true })}
                 />
                 <AlertMessage>
@@ -136,6 +138,7 @@ export default function EditEvent() {
             <h1>Descrição</h1>
             <div>
               <textarea rows="10"
+                placeholder="Fale um pouco sobre o evento:"
                 {...register('description', { required: true })}
               ></textarea>
             </div>
@@ -201,6 +204,7 @@ export default function EditEvent() {
               <div>
                 <h3>Data:</h3>
                 <input type="text"
+                  placeholder="Ex: 31/12/2022"
                   {...register('dateEvent', { required: true })}
                 />
                 <AlertMessage>
@@ -216,6 +220,7 @@ export default function EditEvent() {
               <div>
                 <h3>Celular:</h3>
                 <input type="text"
+                  placeholder="Apenas Números"
                   {...register('tel', { required: true })}
                 />
                 <AlertMessage>
@@ -225,6 +230,7 @@ export default function EditEvent() {
               <div>
                 <h3>E-mail:</h3>
                 <input type="text"
+                  placeholder="exemplo@gmail.com"
                   {...register('email', { required: true })}
                 />
                 <AlertMessage>

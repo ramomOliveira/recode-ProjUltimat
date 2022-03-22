@@ -36,7 +36,7 @@ export const ImgEvent = styled.div`
   background-size: cover;
   background-position: center;
   width: 100px;
-  height: 100px;
+  height: 180px;
 
   @media (min-width: 768px) {
     width: 200px;
@@ -61,7 +61,7 @@ export const WrapperHeader = styled.div`
   @media (min-width: 768px) {
     > div > h1 {
       margin-bottom: 40px;
-      font-size: 30px;
+      font-size: 27px;
       text-transform: uppercase;
     }
   }
@@ -70,10 +70,14 @@ export const WrapperHeader = styled.div`
 export const WrapperImg = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   > h1 {
+    
     margin-top: 10px;
+  }
+
+  @media (min-width: 768px) {
+    
   }
 `;
 

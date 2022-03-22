@@ -66,6 +66,7 @@ export default function AddEvent() {
                 <h3>Horário:</h3>
                 <input
                   type="text"
+                  placeholder="Ex: 19:00"
                   {...register('hourEvent', { required: true })}
                 />
                 <AlertMessage>
@@ -102,6 +103,7 @@ export default function AddEvent() {
             <h1>Descrição</h1>
             <div>
               <textarea rows="10"
+                placeholder="Fale um pouco sobre o evento:"
                 {...register('description', { required: true })}
               ></textarea>
 
@@ -168,6 +170,7 @@ export default function AddEvent() {
               <div>
                 <h3>Data:</h3>
                 <input type="text"
+                  placeholder="Ex: 31/12/2022"
                   {...register('dateEvent', { required: true })}
                 />
                 <AlertMessage>
@@ -183,6 +186,7 @@ export default function AddEvent() {
               <div>
                 <h3>Celular:</h3>
                 <input type="text"
+                  placeholder="Apenas Números"
                   {...register('tel', { required: true })}
                 />
                 <AlertMessage>
@@ -192,6 +196,7 @@ export default function AddEvent() {
               <div>
                 <h3>E-mail:</h3>
                 <input type="text"
+                  placeholder="exemplo@gmail.com"
                   {...register('email', { required: true })}
                 />
                 <AlertMessage>

@@ -125,6 +125,7 @@ export default function Configuration() {
               <div>
                 <h3>Celular:</h3>
                 <input type="text"
+                  placeholder="Apenas Números"
                   {...register('tel', { required: true })}
                 />
                 <AlertMessage>
