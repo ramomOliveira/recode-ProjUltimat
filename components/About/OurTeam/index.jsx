@@ -8,7 +8,7 @@ const arrayDevs = [
     hrefGit: "https://github.com/felipefklopper",
     hrefInsta: "https://www.instagram.com/cloupper_/",
     hrefLinkD: "https://www.linkedin.com/in/felipe-fernandes-klopper/",
-    hrefZap: "/",
+    hrefZap: "https://wa.me/5521985738303?text=Olá%20Felipe!%20Gostaria%20de%20saber%20sobre%20o%20projeto%20Oluchi",
   },
   {
     name: 'Ramom Oliveira',
@@ -16,7 +16,7 @@ const arrayDevs = [
     hrefGit: "https://github.com/ramomOliveira",
     hrefInsta: "https://www.instagram.com/ramomdaiane/",
     hrefLinkD: "https://www.linkedin.com/in/ramomsilva/",
-    hrefZap: "/",
+    hrefZap: "https://wa.me/5532984159697?text=Olá%20Ramom!%20Gostaria%20de%20saber%20sobre%20o%20projeto%20Oluchi",
 
   },
   {
@@ -25,7 +25,7 @@ const arrayDevs = [
     hrefGit: "https://github.com/Aislan-Feliciano",
     hrefInsta: "https://www.instagram.com/aislanfeliciano/",
     hrefLinkD: "https://www.linkedin.com/in/aislan-feliciano-9a75318a/",
-    hrefZap: "/",
+    hrefZap: "https://wa.me/5521980972079?text=Olá%20Aislan!%20Gostaria%20de%20saber%20sobre%20o%20projeto%20Oluchi",
   },
   {
     name: 'Mauro Cunha',
@@ -33,7 +33,7 @@ const arrayDevs = [
     hrefGit: "https://github.com/mauroPh",
     hrefInsta: "https://www.instagram.com/maurophilipe/",
     hrefLinkD: "https://www.linkedin.com/in/mauroph/",
-    hrefZap: "/",
+    hrefZap: "https://wa.me/5521965987582?text=Olá%20Mauro!%20Gostaria%20de%20saber%20sobre%20o%20projeto%20Oluchi",
   },
 ]
 
