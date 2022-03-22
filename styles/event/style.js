@@ -11,34 +11,14 @@ export const TitleH2 = styled.h2`
   margin-bottom: 20px;
 `;
 
-export const WrapperHeader = styled.div`
-  margin-top: 40px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  > h1 {
-    font-size: 40px;
-  }
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    > h1 {
-      font-size: 30px;
-      text-transform: uppercase;
-      margin-top: 8px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    
-  }
+export const TitleH3 = styled.h2`
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
 `;
 
-export const ImgArtist = styled.div`
+export const ImgEvent = styled.div`
   background-image: ${props => `url(${props.image})`} ;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,7 +28,53 @@ export const ImgArtist = styled.div`
 
   @media (min-width: 768px) {
     width: 200px;
-    height: 200px;
+    height: 300px;
+  }
+`;
+
+export const WrapperHeader = styled.div`
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > div > h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    
+  }
+`;
+
+export const WrapperImg = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h1 {
+    margin-top: 10px;
+  }
+`;
+
+export const WrapperMain = styled.div`
+  margin-bottom: 30px;
+  > div {
+    display: flex;
+    gap: 100px;
+  }
+`;
+
+export const WrapperAddress = styled.div`
+  margin-bottom: 30px;
+  margin-top: 60px;
+  > div {
+    display: flex;
+    gap: 100px;
   }
 `;
 
@@ -58,10 +84,14 @@ export const TextP = styled.p`
 `;
 
 export const WrapperContact = styled.div`
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  > a {
+  margin-top: 60px;
+  > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  > div > a {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -98,7 +128,3 @@ background-image: url("/images/about/emailBlack.svg");
   }
 `;
 
-export const WrapperAddress = styled.div`
-  display: flex;
-  gap: 30px;
-`;

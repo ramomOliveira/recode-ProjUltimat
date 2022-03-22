@@ -4,12 +4,14 @@ export const Container = styled.div`
   border-radius: 4px;
   box-shadow: 0px 3px 6px #2121214d;
   width: 100%;
+  
   :hover {
     box-shadow: 0px 3px 6px var(--light-orange);
   }
 
   @media (min-width: 768px) {
     width: min-content;
+    height: 500px;
   }
 `;
 

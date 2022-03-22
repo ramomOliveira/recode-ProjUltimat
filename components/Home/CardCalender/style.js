@@ -5,20 +5,27 @@ export const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: darken;
+  width: 200px;
+  height: 350px;
+`;
+
+export const Wrapper = styled.div`
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   color: var(--white);
   text-transform: uppercase;
   padding: 10px;
 
+  
   > h1 {
     font-size: 32px;
     margin-bottom: 20px;
+    text-align: center;
   }
   > p {
     font-size: 23px;

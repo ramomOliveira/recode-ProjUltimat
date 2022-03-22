@@ -20,7 +20,7 @@ export default function CardContact() {
     <Container className="margins">
       <form action="https://api.staticforms.xyz/submit" method="post" >
         <input type="hidden" name="accessKey" value="f82b7748-96e8-40b1-b62c-610665fa059b" />
-        {/* <input type="hidden" name="redirectTo" value="/" /> */}
+        <input type="hidden" name="redirectTo" value="https://projeto-oluchi.vercel.app/" />
         <WrapperTop>
           <h1>Contato</h1>
 
@@ -44,7 +44,7 @@ export default function CardContact() {
           </WrapperVertical>
         </div>
         <WrapperButton>
-          <Button onClick={pagina} type="submit">Enviar</Button>
+          <Button type="submit">Enviar</Button>
         </WrapperButton>
       </form>
     </Container >

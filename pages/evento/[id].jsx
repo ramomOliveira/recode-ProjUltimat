@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 import apiProd from '../../lib/apiProd';
 import IconLoad from '../../components/IconLoad';
 
-import { Container, TitleH2, WrapperHeader, ImgArtist, TextP, WrapperContact, IconTel, IconEmail, WrapperAddress } from '../../styles/event/style';
+import { Container, TitleH2, TitleH3, WrapperHeader, WrapperImg, WrapperMain, ImgEvent, TextP, WrapperContact, IconTel, IconEmail, WrapperAddress } from '../../styles/event/style';
 
 export default function Event() {
   const [gifLoad, setGifLoad] = useState(true);
@@ -31,84 +31,96 @@ export default function Event() {
           <IconLoad />
         )}
         <Container className="margins">
-          <WrapperHeader>
-            <h1>{event.name}</h1>
-            <div>
 
-              <ImgArtist image='/images/imgEvent.png' />
-              <h1>{event.nameArtist}</h1>
+          <WrapperHeader>
+            <div>
+              <h1>{event.name}</h1>
+
+              <div>
+                <TitleH2>Descrição sobre o evento</TitleH2>
+                <TextP>
+                  {event.description}
+                </TextP>
+              </div>
+
             </div>
+
+            <WrapperImg>
+              <ImgEvent image='/images/imgEvent.png' />
+              <h1>Artista {event.nameArtist}</h1>
+            </WrapperImg>
+
           </WrapperHeader>
 
-          <div>
-            <TitleH2>Descrição sobre o evento</TitleH2>
-            <TextP>
-              {event.description}
-            </TextP>
-          </div>
-          <div>
-            <h1>Informações do Evento</h1>
+          <WrapperMain>
+            <TitleH2>Informações do Evento</TitleH2>
             <div>
-              <TitleH2>Data</TitleH2>
-              <TextP>
-                {event.dateEvent}
-              </TextP>
+              <div>
+                <TitleH3>Data</TitleH3>
+                <TextP>
+                  {event.dateEvent}
+                </TextP>
+              </div>
+              <div>
+                <TitleH3>Horário</TitleH3>
+                <TextP>
+                  {event.hourEvent}
+                </TextP>
+              </div>
+              <div>
+                <TitleH3>Valor</TitleH3>
+                <TextP>
+                  {event.prece}
+                </TextP>
+              </div>
             </div>
-            <div>
-              <TitleH2>Horário</TitleH2>
-              <TextP>
-                {event.hourEvent}
-              </TextP>
-            </div>
-            <div>
-              <TitleH2>Valor</TitleH2>
-              <TextP>
-                {event.prece}
-              </TextP>
-            </div>
-          </div>
+          </WrapperMain>
+
           <WrapperAddress>
-            <h1>Local do Evento</h1>
+            <TitleH2>Local do Evento</TitleH2>
             <div>
-              <TitleH2>Cidade</TitleH2>
-              <TextP>{event.city}</TextP>
-            </div>
-            <div>
-              <TitleH2>Bairro</TitleH2>
-              <TextP>{event.district}</TextP>
-            </div>
-            <div>
-              <TitleH2>Rua</TitleH2>
-              <TextP>{event.address}</TextP>
-            </div>
-            <div>
-              <TitleH2>Numero</TitleH2>
-              <TextP>{event.number}</TextP>
-            </div>
-            <div>
-              <TitleH2>Estado</TitleH2>
-              <TextP>{event.stateUf}</TextP>
+              <div>
+                <TitleH3>Cidade</TitleH3>
+                <TextP>{event.city}</TextP>
+              </div>
+              <div>
+                <TitleH3>Bairro</TitleH3>
+                <TextP>{event.district}</TextP>
+              </div>
+              <div>
+                <TitleH3>Rua</TitleH3>
+                <TextP>{event.address}</TextP>
+              </div>
+              <div>
+                <TitleH3>Numero</TitleH3>
+                <TextP>{event.number}</TextP>
+              </div>
+              <div>
+                <TitleH3>Estado</TitleH3>
+                <TextP>{event.stateUf}</TextP>
+              </div>
             </div>
           </WrapperAddress>
-          <div>
+
+          <WrapperContact>
             <TitleH2>Email</TitleH2>
-            <WrapperContact>
+            <div>
               <IconEmail>
 
               </IconEmail>
               <TextP>{event.email}</TextP>
-            </WrapperContact>
-          </div>
-          <div>
+            </div>
+          </WrapperContact>
+          <WrapperContact>
             <TitleH2>Telefone para contato:</TitleH2>
-            <WrapperContact>
+            <div>
               <a href={`https://wa.me/55${event.tel}?text=Olá!`} target="_blank">
                 <IconTel>
                 </IconTel>
                 <TextP>{event.tel}</TextP>
               </a>
-            </WrapperContact>
-          </div>
+            </div>
+          </WrapperContact>
 
         </Container>
       </div>
