@@ -6,7 +6,7 @@ import AuthInput from "../../components/Authentication/AuthInput";
 import AuthContext from '../../context/AuthContext';
 
 import { Container, Title, WrapperButton, ButtonGoogle, Range, LoginOrRegister, WrapperWarning } from '../../styles/authentication/style';
-import router from 'next/router';
+import { useRouter } from 'next/router';
 
 export default function Authentication() {
   const { cadastrar, login, loginGoogle } = useContext(AuthContext);
