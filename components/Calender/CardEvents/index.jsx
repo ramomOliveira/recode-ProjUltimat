@@ -8,7 +8,7 @@ export default function CardEvents({ name, city, stateUf, tel, href, hrefA }) {
       <a href={hrefA}>
         <Container>
           <WrapperTop>
-            <ImgArtist image="/images/img-page-artist.jpeg" />
+            <ImgArtist image="/images/imgEvent.png" />
           </WrapperTop>
           <WrapperInfo>
             <Name>

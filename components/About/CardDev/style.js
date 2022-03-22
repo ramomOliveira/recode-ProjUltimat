@@ -31,6 +31,19 @@ export const IconGit = styled.div`
 `;
 
 export const IconInsta = styled.div`
+  background-image: url("/images/about/7.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  :hover {
+    background-image: url("/images/about/7White.svg");
+    cursor: pointer;
+  }
+`;
+
+export const IconLinkD = styled.div`
   background-image: url("/images/about/6.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,15 +56,15 @@ export const IconInsta = styled.div`
   }
 `;
 
-export const IconLinkD = styled.div`
-  background-image: url("/images/about/7.svg");
+export const IconZap = styled.div`
+  background-image: url("/images/about/zapCor.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 40px;
   height: 40px;
   :hover {
-    background-image: url("/images/about/7White.svg");
+    background-image: url("/images/about/6White.svg");
     cursor: pointer;
   }
 `;

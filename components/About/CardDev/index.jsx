@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-import { Container, WrapperIcons, Title, ImgAvatar, IconGit, IconInsta, IconLinkD } from './style';
+import { Container, WrapperIcons, Title, ImgAvatar, IconGit, IconInsta, IconLinkD, IconZap } from './style';
 
-export default function CardDev({ name, imgAvatar, hrefGit, hrefLinkD, hrefInsta }) {
+export default function CardDev({ name, imgAvatar, hrefGit, hrefLinkD, hrefInsta, hrefZap }) {
   return (
     <Container>
       <Title>{name}</Title>
@@ -19,6 +19,10 @@ export default function CardDev({ name, imgAvatar, hrefGit, hrefLinkD, hrefInsta
 
         <a href={hrefLinkD} target="_blank">
           <IconLinkD />
+        </a>
+
+        <a href={hrefZap} target="_blank">
+          <IconZap />
         </a>
 
       </WrapperIcons>

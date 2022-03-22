@@ -35,7 +35,7 @@ export default function Event() {
             <h1>{event.name}</h1>
             <div>
 
-              <ImgArtist image="/images/img-page-artist.jpeg" />
+              <ImgArtist image='/images/imgEvent.png' />
               <h1>{event.nameArtist}</h1>
             </div>
           </WrapperHeader>

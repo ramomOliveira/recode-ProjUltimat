@@ -5,9 +5,10 @@ const arrayDevs = [
   {
     name: 'Felipe Klopper',
     imgAvatar: "/images/about/1.svg",
-    hrefGit: "/",
-    hrefInsta: "/",
-    hrefLinkD: "/",
+    hrefGit: "https://github.com/felipefklopper",
+    hrefInsta: "https://www.instagram.com/cloupper_/",
+    hrefLinkD: "https://www.linkedin.com/in/felipe-fernandes-klopper/",
+    hrefZap: "/",
   },
   {
     name: 'Ramom Oliveira',
@@ -15,20 +16,24 @@ const arrayDevs = [
     hrefGit: "https://github.com/ramomOliveira",
     hrefInsta: "https://www.instagram.com/ramomdaiane/",
     hrefLinkD: "https://www.linkedin.com/in/ramomsilva/",
+    hrefZap: "/",
+
   },
   {
     name: 'Aislan Feliciano',
     imgAvatar: "/images/about/4.svg",
-    hrefGit: "/",
-    hrefInsta: "/",
-    hrefLinkD: "/",
+    hrefGit: "https://github.com/Aislan-Feliciano",
+    hrefInsta: "https://www.instagram.com/aislanfeliciano/",
+    hrefLinkD: "https://www.linkedin.com/in/aislan-feliciano-9a75318a/",
+    hrefZap: "/",
   },
   {
     name: 'Mauro Cunha',
     imgAvatar: "/images/about/2.svg",
-    hrefGit: "/",
-    hrefInsta: "/",
-    hrefLinkD: "/",
+    hrefGit: "https://github.com/mauroPh",
+    hrefInsta: "https://www.instagram.com/maurophilipe/",
+    hrefLinkD: "https://www.linkedin.com/in/mauroph/",
+    hrefZap: "/",
   },
 ]
 
@@ -47,6 +52,7 @@ export default function OurTeam() {
               hrefGit={item.hrefGit}
               hrefInsta={item.hrefInsta}
               hrefLinkD={item.hrefLinkD}
+              hrefZap={item.hrefZap}
             />
           ))}
 

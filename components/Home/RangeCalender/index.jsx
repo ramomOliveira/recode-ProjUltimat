@@ -29,6 +29,8 @@ export default function RangeCalender() {
   useEffect(() => {
     load()
   }, [])
+
+  const selection = listEvents.slice(0, 3)
   return (
     <Container className="margins">
       <Wrapper>
@@ -44,10 +46,10 @@ export default function RangeCalender() {
         {gifLoad && (
           <IconLoad />
         )}
-        {listEvents.map((item) => (
+        {selection.map((item) => (
           <CardCalender
             key={item.id}
-            imageUrl='/images/home/img-calender3.jpeg'
+            imageUrl='/images/imgEvent.png'
             href={`/evento/${item.id}`}
             hrefA={`/evento/${item.id}`}
             name={item.name}

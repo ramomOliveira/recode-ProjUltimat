@@ -69,7 +69,7 @@ export const WrapperWarning = styled.div`
 export const ButtonGoogle = styled.div`
   > button {
     background-color: black;
-    color: var(--red);
+    color: var(--white);
     
     width: 100%;
     display: flex;
