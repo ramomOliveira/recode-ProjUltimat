@@ -64,7 +64,7 @@ export const IconZap = styled.div`
   width: 40px;
   height: 40px;
   :hover {
-    background-image: url("/images/about/6White.svg");
+    background-image: url("/images/about/zapWhite.svg");
     cursor: pointer;
   }
 `;

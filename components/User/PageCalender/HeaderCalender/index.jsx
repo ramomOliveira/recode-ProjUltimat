@@ -5,10 +5,10 @@ import { Container, WrapperSearch } from './style';
 export default function HeaderCalender() {
   return (
     <Container>
-      <WrapperSearch>
+      {/* <WrapperSearch>
         <input type="search" />
         <Button link >Buscar</Button>
-      </WrapperSearch>
+      </WrapperSearch> */}
       <Link href="/usuario/adicionar-evento"><Button blackMode >Adicionar Evento</Button></Link>
     </Container>
   )
