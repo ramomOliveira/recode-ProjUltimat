@@ -10,7 +10,7 @@ import router from 'next/router';
 
 export default function Authentication() {
   const { cadastrar, login, loginGoogle } = useContext(AuthContext);
-
+  const router = useRouter();
   const [warning, setWarning] = useState('')
   const [modo, setModo] = useState('login');
   const [email, setEmail] = useState('')
