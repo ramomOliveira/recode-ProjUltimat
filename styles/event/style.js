@@ -5,17 +5,29 @@ export const Container = styled.div`
 `;
 
 export const TitleH2 = styled.h2`
-  font-size: 25px;
+  font-size: 16px;
   text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const TitleH3 = styled.h2`
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ImgEvent = styled.div`
@@ -36,18 +48,22 @@ export const WrapperHeader = styled.div`
   margin-top: 40px;
   margin-bottom: 20px;
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
 
   > div > h1 {
-    font-size: 40px;
     margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 19px;
     text-transform: uppercase;
   }
 
   @media (min-width: 768px) {
-    
+    > div > h1 {
+      margin-bottom: 40px;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
   }
 `;
 
@@ -62,29 +78,53 @@ export const WrapperImg = styled.div`
 `;
 
 export const WrapperMain = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   > div {
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+    > div {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+    }
   }
 `;
 
 export const WrapperAddress = styled.div`
-  margin-bottom: 30px;
-  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-top: 30px;
   > div {
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+    margin-top: 60px;
+    > div {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+    }
   }
 `;
 
 export const TextP = styled.p`
-  font-size: 17px;
+  font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
 `;
 
 export const WrapperContact = styled.div`
-  margin-top: 60px;
+  margin-top: 20px;
   > div {
     display: flex;
     gap: 10px;
@@ -102,6 +142,10 @@ export const WrapperContact = styled.div`
         cursor: pointer;
       }
     }    
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 60px;
   }
 `;
 
