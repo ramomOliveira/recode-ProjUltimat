@@ -7,6 +7,7 @@ import Button from '../../../components/Button';
 import apiProd from "../../../lib/apiProd";
 import ArrowBack from '../../../components/ArrowBack';
 import AppContext from '../../../context/App';
+import AlertMessage from '../../../components/AlertMessage';
 
 import { WrapperForm, WrapperButton, Wrapper, Info } from '../../../styles/user/addEvent/style';
 
@@ -91,13 +92,19 @@ export default function EditEvent() {
                 <input type="text"
                   {...register('name', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.name && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
               <div>
                 <h3>Horário:</h3>
                 <input
                   type="text"
-                  {...register('hourEvent', { required: false })}
+                  {...register('hourEvent', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.hourEvent && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
             </Info>
 
@@ -107,14 +114,20 @@ export default function EditEvent() {
                 <input type="text"
                   {...register('nameArtist', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.nameArtist && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
               <div>
                 <h3>Preço da entrada:</h3>
                 <input
                   placeholder="Ex: Entrada Gratis ou R$ 50,00"
                   type="text"
-                  {...register('prece', { required: false })}
+                  {...register('prece', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.prece && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
             </Info>
           </Wrapper>
@@ -123,9 +136,12 @@ export default function EditEvent() {
             <h1>Descrição</h1>
             <div>
               <textarea rows="10"
-                {...register('description', { required: false })}
+                {...register('description', { required: true })}
               ></textarea>
             </div>
+            <AlertMessage>
+              {errors.description && 'Campo obrigatório'}
+            </AlertMessage>
           </Wrapper>
 
           <Wrapper>
@@ -134,14 +150,20 @@ export default function EditEvent() {
               <div>
                 <h3>Cidade:</h3>
                 <input type="text"
-                  {...register('city', { required: false })}
+                  {...register('city', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.city && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
               <div>
                 <h3>Estado:</h3>
                 <input type="text"
-                  {...register('stateUf', { required: false })}
+                  {...register('stateUf', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.stateUf && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
             </Info>
 
@@ -149,14 +171,20 @@ export default function EditEvent() {
               <div>
                 <h3>Rua:</h3>
                 <input type="text"
-                  {...register('address', { required: false })}
+                  {...register('address', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.address && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
               <div>
                 <h3>Bairro:</h3>
                 <input type="text"
-                  {...register('district', { required: false })}
+                  {...register('district', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.district && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
             </Info>
 
@@ -164,14 +192,20 @@ export default function EditEvent() {
               <div>
                 <h3>Número:</h3>
                 <input type="text"
-                  {...register('number', { required: false })}
+                  {...register('number', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.number && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
               <div>
                 <h3>Data:</h3>
                 <input type="text"
-                  {...register('dateEvent', { required: false })}
+                  {...register('dateEvent', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.dateEvent && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
             </Info>
           </Wrapper>
@@ -182,14 +216,20 @@ export default function EditEvent() {
               <div>
                 <h3>Celular:</h3>
                 <input type="text"
-                  {...register('tel', { required: false })}
+                  {...register('tel', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.tel && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
               <div>
                 <h3>E-mail:</h3>
                 <input type="text"
-                  {...register('email', { required: false })}
+                  {...register('email', { required: true })}
                 />
+                <AlertMessage>
+                  {errors.email && 'Campo obrigatório'}
+                </AlertMessage>
               </div>
             </div>
           </Wrapper>
