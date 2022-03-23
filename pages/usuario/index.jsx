@@ -9,8 +9,17 @@ import AuthContext from '../../context/AuthContext';
 
 export default function User() {
   const [gifLoad, setGifLoad] = useState(true);
+  const [profile, setProfile] = useState({});
   const [eventsCalender, setEventsCalender] = useState([]);
   const { user } = useContext(AuthContext)
+
+  useEffect(() => {
+    apiProd.get('/artist/profile').then((response) => {
+      setProfile(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+  }, [])
 
   useEffect(() => {
     apiProd.get('/event/user').then((response) => {
@@ -27,7 +36,9 @@ export default function User() {
       <Head>
         <title>Oluchi - Painel Admin</title>
       </Head>
-      <LayoutUser title={`Olá, ${user?.displayName}`} subTitle="Seus Eventos">
+      <LayoutUser
+        title={`Olá, ${profile?.name || user?.displayName}`}
+        subTitle="Seus Eventos">
         {gifLoad && (
           <IconLoad />
         )}
