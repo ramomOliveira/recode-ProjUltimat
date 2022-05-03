@@ -14,6 +14,8 @@ TECNOLOGIAS USADAS
 - Veja o projeto online [Oluchi](https://projeto-oluchi.vercel.app/) , deploy feito na [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
 
+<img src="/images/readme/CapaOluchi.png" alt="Pagina Home"/>
+
 ## Getting Started
 
 Primeiro, execute o servidor de desenvolvimento:
